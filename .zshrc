@@ -76,3 +76,6 @@ else
 PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m] %%
 "
 fi
+
+path=($HOME/dotfiles/bin(N-/) $path)
+

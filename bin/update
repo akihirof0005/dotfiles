@@ -1,5 +1,13 @@
 #!/bin/bash
-softwareupdate --install --all
-brew update
-brew upgrade
-brew cask upgrade
+
+if [ "$(uname)" == 'Darwin' ]; then
+  echo "update system packages"
+  softwareupdate --install --all
+  echo "update brew packages"
+  brew update
+  brew upgrade
+  echo "update brew cask packages"
+  brew cask upgrade
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  OS='Linux'
+fi
