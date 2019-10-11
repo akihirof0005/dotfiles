@@ -8,12 +8,37 @@ repo = 'tpope/vim-endwise'
 repo = 'Townk/vim-autoclose'
 
 [[plugins]]
-repo = 'joshdick/onedark.vim'
+repo = 'tomasr/molokai'
 hook_add = '''
-  colorscheme onedark
+  colorscheme molokai
 '''
+
 [[plugins]]
 repo = 'Chiel92/vim-autoformat'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+
+[[plugins]]
+repo = 'tfnico/vim-gradle'
+
+[[plugins]]
+repo = 'kassio/neoterm'
