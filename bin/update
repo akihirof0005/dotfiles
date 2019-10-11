@@ -9,5 +9,7 @@ if [ "$(uname)" == 'Darwin' ]; then
   echo "update brew cask packages"
   brew cask upgrade
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  yay -Syyu
+  yay -Syyua
   OS='Linux'
 fi
