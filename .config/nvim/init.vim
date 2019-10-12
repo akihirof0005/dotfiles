@@ -1,19 +1,35 @@
 filetype plugin indent on
 
-syntax enable
-set number
+" Encode
+set encoding=utf-8
+scriptencoding utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,euc-jp,cp932 
+set fileformats=unix,dos,mac
+set ambiwidth=double
+
+" Tab & Indent
 set expandtab 
 set tabstop=2 
-set softtabstop=2 
-set smartindent 
 set autoindent
 set shiftwidth=2
 set expandtab
+set softtabstop=2 
+set showmatch
+
+" View
+set number
+set cursorline
 set splitright
 set clipboard=unnamed
 set hls
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 tnoremap <silent> <ESC> <C-\><C-n>
+source $VIMRUNTIME/macros/matchit.vim
+
+" Command 
+set wildmenu
+set history=5000
 
 if &compatible
   set nocompatible
@@ -28,9 +44,21 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-filetype plugin indent on
+
 syntax enable
 set t_Co=256
-set tabstop=2
 
 :command UP UpdateRemotePlugins
+
+if &term =~ "xterm"
+    let &t_SI .= "\e[?2004h"
+    let &t_EI .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+endif
