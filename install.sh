@@ -11,6 +11,7 @@ sh ./installer.sh ~/.cache/dein
 ## install zgen for zsh
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
+chsh -s /bin/zsh
 source ~/.zshrc
 
 
