@@ -14,19 +14,6 @@ fi
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-# ここはプロンプトの設定なので今回の設定とは関係ありません
-if [ $UID -eq 0 ];then
-# ルートユーザーの場合
-PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
-"
-else
-# ルートユーザー以外の場合
-PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m] %%
-"
-fi
-
-
-# ブランチ名を色付きで表示させるメソッド
 function rprompt-git-current-branch {
   local branch_name st branch_status
 
@@ -41,10 +28,10 @@ function rprompt-git-current-branch {
     branch_status="%F{green}"
   elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
     # gitに管理されていないファイルがある状態
-    branch_status="%F{red}?"
+    branch_status="%F{green}?"
   elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
     # git addされていないファイルがある状態
-    branch_status="%F{red}+"
+    branch_status="%F{green}+"
   elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
     # git commitされていないファイルがある状態
     branch_status="%F{yellow}!"
