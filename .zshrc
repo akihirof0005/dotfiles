@@ -9,6 +9,8 @@ if ! zgen saved; then
   zgen oh-my-zsh
   zgen oh-my-zsh themes/clean
   zgen load zsh-users/zsh-syntax-highlighting
+  zgen load zsh-users/zsh-completions
+
   zgen save
 fi
 
