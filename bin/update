@@ -13,6 +13,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     sudo pacman -Syyu
     yay -Syyua
     sudo pacman -Sc
-    OS='Linux'
+  elif [ -e /etc/lsb-release ]; then 
+    sudo apt update
+    sudo apt upgrade 
+    sudo apt autoremove
   fi
 fi
