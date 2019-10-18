@@ -13,9 +13,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     sudo pacman -Syyu
     yay -Syyua
     sudo pacman -Sc
-  elif [ -e /etc/lsb-release ]; then 
+  elif [ -e /etc/lsb-release ]; then
     sudo apt update
-    sudo apt upgrade 
+    sudo apt upgrade
+    sudo apt autoremove
+  elif [ -e /etc/debian_version ]; then
+    sudo apt update
+    sudo apt upgrade
     sudo apt autoremove
   fi
 fi
