@@ -123,7 +123,7 @@ main = do
     `additionalKeys`
     [ ((modm , xK_w ), spawn "google-chrome-stable")
     ---[ ((modm , xK_w ), spawn "firefox")
-    ,((modm , xK_f ), spawn "nemo")
+    ,((modm , xK_f ), spawn "thunar")
     ,((modm , xK_o ), spawn "obs")
     ,((modm , xK_b ), spawn "xfce4-screenshooter")
     ,((modm , xK_s ), spawn "skypeforlinux")
@@ -143,16 +143,16 @@ main = do
     ]
 
 -- Handle Window behaveior
---myLayout = (spacing 18 $ ResizableTall 1 (3/100) (3/5) [])
 --            |||  (spacing 2 $ (dragPane Horizontal (1/10) (1/2)))
 --            |||  (dragPane Vertical   (1/10) (1/2))
 myLayout = (spacing 18 $ OneBig (3/4) (3/4))
+              ||| (spacing 18 $ ResizableTall 1 (3/100) (3/5) [])
 --            |||  spiral (6/7)
 --            |||  GridRatio (4/3)
 --            |||   (spacing 4 $ ResizableTall 1 (1/201) (116/201) [])
             |||  withIM (1/5) (ClassName "Skype")  (spacing 18 $ OneBig (3/4) (3/4))
             ||| (spacing 0 $ Simplest)
-            ||| Circle  
+            ||| Circle
     where
       jd = And (ClassName "Jd") (Role "")
 
@@ -162,6 +162,7 @@ myStartupHook = do
   spawn "monitor"
   spawn "redshift"
   spawn "urxvtd -o -f"
+  spawn "thunar --daemon &"
   spawn "compton -b &"
   spawn "fcitx-autostart &"
   spawn "volnoti"
