@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# update Systems
+bash bash bin/update
+
 # Install plugins
 
 ## install dein for nvim
