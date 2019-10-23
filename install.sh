@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # update Systems
-bash bash bin/update
+bash bin/update
 
 # Install plugins
 
