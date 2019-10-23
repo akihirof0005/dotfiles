@@ -22,7 +22,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     sudo apt upgrade
     sudo apt autoremove
   fi
-elif [ "$(expr substr $(uname -m) 1 5)" == 'aarch64' ]; then
+elif [ "$(expr substr $(uname -m) 1 7)" == 'aarch64' ]; then
 pkg update
 pkg upgrade
 pkg install neovim openssh zsh   rust
