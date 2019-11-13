@@ -1,8 +1,9 @@
 aom
+berkeley-db
 cairo
 colordiff
-docker
 docker-compose
+docutils
 ffmpeg
 flac
 fontconfig
@@ -11,6 +12,7 @@ freetype
 frei0r
 fribidi
 gcc
+gd
 gdbm
 gettext
 giflib
@@ -86,6 +88,7 @@ pango
 pcre
 pcre2
 pixman
+pkg-config
 powerline-shell
 python
 readline
@@ -108,6 +111,7 @@ uchardet
 unbound
 unibilium
 vapoursynth
+webalizer
 webp
 webpack
 wget
