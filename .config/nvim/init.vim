@@ -62,10 +62,6 @@ if &term =~ "xterm"
 
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
-autocmd VimEnter * execute 'vsplit'
-autocmd VimEnter * execute 'split'
-autocmd VimEnter * execute 'terminal'
-
 nnoremap s <Nop>
 nnoremap sw <C-w>w
 nnoremap ss :<C-u>sp<CR>
