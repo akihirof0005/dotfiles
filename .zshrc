@@ -57,12 +57,12 @@ RPROMPT='`rprompt-git-current-branch`'
 
 # ここはプロンプトの設定なので今回の設定とは関係ありません
 if [ $UID -eq 0 ];then
-# ルートユーザーの場合
-PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
+  # ルートユーザーの場合
+  PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
 "
 else
-# ルートユーザー以外の場合
-PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
+  # ルートユーザー以外の場合
+  PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
 %% "
 fi
 
@@ -70,4 +70,4 @@ path=($HOME/dotfiles/bin(N-/) $path)
 path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
 cd ~
 
- export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
+#export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
