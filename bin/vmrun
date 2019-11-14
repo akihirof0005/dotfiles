@@ -1,0 +1,2 @@
+#!/bin/sh
+vboxmanage startvm "dev.linux.local" --type headless

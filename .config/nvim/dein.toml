@@ -57,3 +57,11 @@ repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'vim-scripts/groovyindent-unix'
+on_ft = ['groovy']
+
+[[plugins]]
+repo= 'scrooloose/nerdtree'
+
