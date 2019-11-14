@@ -1,4 +1,4 @@
-docker
+adoptopenjdk8
 firefox
 fluid
 font-cascadia
@@ -6,6 +6,7 @@ font-hack-nerd-font
 google-chrome
 iterm2
 java
+mpv
 skype
 slack
 typora

@@ -4,17 +4,17 @@ filetype plugin indent on
 set encoding=utf-8
 scriptencoding utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,euc-jp,cp932 
+set fileencodings=utf-8,euc-jp,cp932
 set fileformats=unix,dos,mac
 set ambiwidth=double
 
 " Tab & Indent
-set expandtab 
-set tabstop=2 
+set expandtab
+set tabstop=2
 set autoindent
 set shiftwidth=2
 set expandtab
-set softtabstop=2 
+set softtabstop=2
 set showmatch
 
 " View
@@ -27,7 +27,7 @@ set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 tnoremap <silent> <ESC> <C-\><C-n>
 source $VIMRUNTIME/macros/matchit.vim
 
-" Command 
+" Command
 set wildmenu
 set history=5000
 
@@ -62,3 +62,7 @@ if &term =~ "xterm"
 
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
+nnoremap s <Nop>
+nnoremap sw <C-w>w
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
