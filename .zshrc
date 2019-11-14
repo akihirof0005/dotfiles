@@ -62,11 +62,12 @@ PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
 "
 else
 # ルートユーザー以外の場合
-PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m] %%
-"
+PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
+%% "
 fi
 
 path=($HOME/dotfiles/bin(N-/) $path)
+path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
 cd ~
 
  export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
