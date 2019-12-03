@@ -15,6 +15,6 @@ zsh ./installer.sh ~/.cache/dein
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
 chsh -s /bin/zsh
-source ~/.zshrc
+exec zsh
 
 
