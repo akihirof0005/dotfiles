@@ -89,7 +89,7 @@ main = do
     `additionalKeys`
     [ ((modm , xK_w ), spawn "google-chrome-stable")
     , ((modm , xK_f ), spawn "thunar")
-    , ((modm , xK_o ), spawn "obs")
+    , ((modm , xK_m ), spawn "/usr/share/mailspring/mailspring")
     , ((modm , xK_b ), spawn "xfce4-screenshooter")
     , ((modm , xK_s ), spawn "skypeforlinux")
     , ((modm , xK_i ), spawn "chromium --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
