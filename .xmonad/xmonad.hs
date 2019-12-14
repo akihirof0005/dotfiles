@@ -123,7 +123,7 @@ myStartupHook = do
   spawn "fcitx-autostart &"
   spawn "volnoti"
   spawn "xsetroot -cursor_name left_ptr"
-  spawn "feh --bg-tile /home/naniwa/Pictures/bgImage/board.jpg"
+  spawn "feh --bg-tile /home/skit/Downloads/isometropolis.jpg"
   spawn "/usr/local/bin/jd"
   spawn "skypeforlinux"
 
