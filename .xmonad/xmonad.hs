@@ -96,17 +96,17 @@ main = do
     , ((modm , xK_t ), spawn "chromium --app=https://tweetdeck.twitter.com/")
     , ((modm , xK_z ), spawn "/usr/local/bin/jd ")
     , ((modm , xK_d), windows copyToAll)
-    , ((modm , xK_a ), spawn "qtwebflix")
     , ((modm , xK_c ), kill ) -- %! Close the focused window
-    , ((modm , xK_p ), spawn "gmrun")
+    , ((modm , xK_p ), spawn "rofi -show run")
+    , ((modm , xK_a ), spawn "rofi -show ssh")
     , ((modm , xK_Up ), spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%")
     , ((modm , xK_Down ), spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%")
     , ((modm , xK_Left ), spawn "headphone")
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
     ]
 
-myLayout = (spacing 18 $ OneBig (3/4) (3/4))
-      ||| (spacing 18 $ ResizableTall 1 (3/100) (3/5) [])
+myLayout = (spacing 6 $ OneBig (3/4) (3/4))
+      ||| (spacing 6 $ ResizableTall 1 (3/100) (3/5) [])
       |||  withIM (1/5) (ClassName "Skype")  (spacing 18 $ OneBig (3/4) (3/4))
       ||| (spacing 0 $ Simplest)
       ||| Circle
@@ -119,11 +119,11 @@ myStartupHook = do
   spawn "redshift -l 35.69935:139.76957 &"
   spawn "urxvtd -o -f"
   spawn "thunar --daemon &"
-  spawn "compton -b &"
+  spawn "picom --config ~/dotfiles/.config/picom.conf -b &"
   spawn "fcitx-autostart &"
   spawn "volnoti"
   spawn "xsetroot -cursor_name left_ptr"
-  spawn "feh --bg-tile /home/skit/Downloads/isometropolis.jpg"
+  spawn "feh --bg-tile /home/skit/Downloads/wall.jpg"
   spawn "/usr/local/bin/jd"
   spawn "skypeforlinux"
 
