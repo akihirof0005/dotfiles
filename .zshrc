@@ -8,9 +8,8 @@ if ! zgen saved; then
 
   zgen oh-my-zsh
   zgen oh-my-zsh themes/clean
-  zgen load zsh-users/zsh-syntax-highlighting
   zgen load zsh-users/zsh-completions
-
+  zgen load zsh-users/zsh-history-substring-search
   zgen save
 fi
 
@@ -59,7 +58,7 @@ RPROMPT='`rprompt-git-current-branch`'
 if [ $UID -eq 0 ];then
   # ルートユーザーの場合
   PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
-"
+  "
 else
   # ルートユーザー以外の場合
   PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
@@ -73,3 +72,8 @@ cd ~
 #if [ "$(uname)" == 'Darwin' ]; then
 #  export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
 #fi
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/bash_completion
+source /usr/share/nvm/install-nvm-exec
+
