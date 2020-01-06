@@ -114,7 +114,6 @@ myLayout = (spacing 3 $ ResizableTall 1 (3/100) (3/5) [])
 
 myStartupHook = do
   spawn "setxkbmap -layout jp"
-  spawn "monitor"
   spawn "redshift -l 35.69935:139.76957 &"
   spawn "urxvtd -o -f"
   spawn "thunar --daemon &"
@@ -122,9 +121,10 @@ myStartupHook = do
   spawn "fcitx-autostart &"
   spawn "volnoti"
   spawn "xsetroot -cursor_name left_ptr"
-  spawn "feh --bg-tile /home/skit/Downloads/wall.jpg"
+  spawn "feh --bg-tile /home/skit/.wall.jpg"
 --  spawn "/usr/local/bin/jd"
   spawn "skypeforlinux"
+  spawn "monitor"
 
 myManageHookShift = composeAll
   [ ]
