@@ -57,11 +57,11 @@ RPROMPT='`rprompt-git-current-branch`'
 # ここはプロンプトの設定なので今回の設定とは関係ありません
 if [ $UID -eq 0 ];then
   # ルートユーザーの場合
-  PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
-  "
+PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
+"
 else
   # ルートユーザー以外の場合
-  PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
+PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
 %% "
 fi
 
@@ -71,9 +71,15 @@ cd ~
 
 if [ "$(uname)" = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
-elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
+  eval "$(rbenv init -)"
+
   [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
   source /usr/share/nvm/nvm.sh
   source /usr/share/nvm/bash_completion
   source /usr/share/nvm/install-nvm-exec
+  #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+  export SDKMAN_DIR=$HOME"/.sdkman"
+  [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
 fi
+export EDITOR=nvim
