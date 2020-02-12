@@ -1,7 +1,7 @@
 !-------------------------------------------------------------------------------
 ! Xft settings
 !-------------------------------------------------------------------------------
-Xft.dpi:                    96
+Xft.dpi:                    120
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
@@ -23,7 +23,8 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font: xft:Ricty:pixelsize=18
+URxvt*font: xft:Ricty Discord:pixelsize=23
+Rxvt.kuake.hotkey: F12
 
 ! Fix font space
 !URxvt*letterSpace: -1
@@ -55,7 +56,7 @@ URxvt*iso14755: false
 
 ! Color
 ! スケスケにするためのパラメータ
-!urxvt*shading: 5
+!urxvt*shading: 95
 !urxvt*shading: 5
 !URxvt*inheritPixmap: true
 
@@ -86,9 +87,9 @@ URxvt*iso14755: false
 !URxvt*color12:  #7587a6
 !URxvt*color13:  #0ae6e6
 !URxvt*color14:  #ffffff
-URxvt*background: [85]#101010
-!URxvt.background: [5]#ffffff
-*foreground: #CCCCCC
+!URxvt*background: [75]#101010
+URxvt.background: [65]#000000
+URxvt*foreground: #ffffff
 URxvt*color0: #101010
 URxvt*color1: #960050
 URxvt*color2: #66aa11

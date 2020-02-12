@@ -1,6 +1,7 @@
 import qualified Data.Map as M
 
 import XMonad
+--import XMonad.Config.Kde
 import qualified XMonad.StackSet as W  -- myManageHookShift
 
 import XMonad.Actions.CopyWindow
@@ -49,7 +50,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Hooks.EwmhDesktops
 import Data.Ratio ((%))
 
-myWorkspaces = [" Main ", " Media ", " Side ", " 4 ", " 5 "]
+myWorkspaces = [" Left ", " Up ", " Right ", " Down "]
 
 modm = mod1Mask
 
@@ -58,7 +59,7 @@ colorGreen     = "#00FF00"
 colorGray      = "#676767"
 colorWhite     = "#d3d7cf"
 colorGrayAlt   = "#313131"
-colorNormalbg  = "#1a1e1b"
+colorNormalbg  = "#55504E"
 
 keysToRemove x =
   [
@@ -73,7 +74,9 @@ main :: IO ()
 
 main = do
   wsbar <- spawnPipe myWsBar
-  xmonad $  docks $ ewmh def 
+--  xmonad $  docks $ ewmh kdeConfig
+--  xmonad $  docks $ ewmh def
+  xmonad $  docks $ def
     { borderWidth = 2
     , terminal = "urxvtc"
     , normalBorderColor = colorGray
@@ -91,10 +94,10 @@ main = do
     , ((modm , xK_f ), spawn "thunar")
     , ((modm , xK_m ), spawn "/usr/share/mailspring/mailspring")
     , ((modm , xK_b ), spawn "xfce4-screenshooter")
-    , ((modm , xK_s ), spawn "skypeforlinux")
+    , ((modm , xK_s ), spawn "slack")
     , ((modm , xK_i ), spawn "chromium --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
-    , ((modm , xK_t ), spawn "chromium --app=https://tweetdeck.twitter.com/")
-    , ((modm , xK_z ), spawn "/usr/local/bin/jd ")
+    , ((modm , xK_n ), spawn "urxvt -e  nmtui ")
+    , ((modm , xK_z ), spawn "/usr/local/bin/jdim ")
     , ((modm , xK_d), windows copyToAll)
     , ((modm , xK_c ), kill ) -- %! Close the focused window
     , ((modm , xK_p ), spawn "rofi -show run")
@@ -105,26 +108,40 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = (spacing 3 $ ResizableTall 1 (3/100) (3/5) [])
-      |||  withIM (1/5) (ClassName "Skype")  (spacing 3 $ OneBig (3/4) (3/4))
-      ||| (spacing 3 $ ThreeCol 1 (3/100) (1/2))
+myLayout = (spacing 1 $ ResizableTall 1 (3/100) (3/5) [])
+      |||  withIM (1/3) (ClassName "Skype")  (spacing 1 $ OneBig (2/3) (2/3))
+      |||  withIM (1/3) (ClassName "Slack")  (spacing 1 $ OneBig (2/3) (2/3))
+      ||| (spacing 1 $ ThreeCol 1 (3/100) (1/2))
       |||  Simplest
     where
-      jd = And (ClassName "Jd") (Role "")
+      jdim = And (ClassName "Jdim") (Role "")
 
 myStartupHook = do
+  spawn "stalonetray --dockapp-mode simple &"
+  spawn "xdotool key alt+2"
+  spawn "feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-simplyblack.png"
+  spawn "volnoti"
   spawn "setxkbmap -layout jp"
-  spawn "redshift -l 35.69935:139.76957 &"
   spawn "urxvtd -o -f"
   spawn "thunar --daemon &"
   spawn "picom --config ~/dotfiles/.config/picom.conf -b &"
-  spawn "fcitx-autostart &"
-  spawn "volnoti"
-  spawn "xsetroot -cursor_name left_ptr"
-  spawn "feh --bg-tile /home/skit/.wall.jpg"
---  spawn "/usr/local/bin/jd"
+--  spawn "geary "
+--  spawn "xsetroot -cursor_name left_ptr"
   spawn "skypeforlinux"
-  spawn "monitor"
+  spawn "slack "
+  spawn "killall nm-applet; nm-applet 2>&1 > /dev/null &"
+  spawn "mailspring &"
+  spawn "killall dunst; dunst &"
+  --spawn "pulseaudio --kill; pulseaudio --start && sleep 1&& pasystray"
+  spawn "pasystray"
+  spawn "blueman-applet &"
+  spawn "mate-power-manager  2>&1 > /dev/null &"
+  spawn "autorandr --load laptop"
+  spawn "fcitx-autostart &"
+  spawn "urxvt -pe tabbed,kuake  &"
+  spawn "libinput-gestures-setup start &"
+  spawn "sleep 3 && xdotool key \"alt+c\" && xdotool key \"alt+c\""
+--  spawn "xinput --set-prop \"SynPS/2 Synaptics TouchPad\" \"Device Enabled\" 0"
 
 myManageHookShift = composeAll
   [ ]

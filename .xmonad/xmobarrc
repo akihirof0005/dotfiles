@@ -1,0 +1,6 @@
+Config { font = "xft:Ricty-12:Bold"
+       , bgColor = "#55504E"
+       , fgColor = "#FFFFFF"
+       , position =  Static { xpos = 0, ypos = 0, width = 1620, height = 30 },
+       , lowerOnStart = False
+       }
