@@ -30,6 +30,8 @@ source $VIMRUNTIME/macros/matchit.vim
 " Command
 set wildmenu
 set history=5000
+set backupdir=$HOME/dotfiles/filebackup
+let &directory = &backupdir
 
 if &compatible
   set nocompatible
