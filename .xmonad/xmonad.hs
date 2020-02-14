@@ -50,7 +50,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Hooks.EwmhDesktops
 import Data.Ratio ((%))
 
-myWorkspaces = [" Left ", " Up ", " Right ", " Down "]
+myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 "," 5 "," 6 "," 7 "," 8 "," 9 "]
 
 modm = mod1Mask
 
@@ -77,7 +77,7 @@ main = do
 --  xmonad $  docks $ ewmh kdeConfig
 --  xmonad $  docks $ ewmh def
   xmonad $  docks $ def
-    { borderWidth = 2
+    { borderWidth = 1
     , terminal = "urxvtc"
     , normalBorderColor = colorGray
     , focusedBorderColor = colorGreen
@@ -102,24 +102,25 @@ main = do
     , ((modm , xK_c ), kill ) -- %! Close the focused window
     , ((modm , xK_p ), spawn "rofi -show run")
     , ((modm , xK_a ), spawn "rofi -show ssh")
+    , ((modm    , xK_Tab ), moveTo Next NonEmptyWS) 
+    , ((modm .|. shiftMask, xK_Tab ), moveTo Prev NonEmptyWS) 
     , ((modm , xK_Up ), spawn "pactl set-sink-volume @DEFAULT_SINK@ +5% && volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     , ((modm , xK_Down ), spawn "pactl set-sink-volume @DEFAULT_SINK@ -5% && volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     , ((modm , xK_Left ), spawn "headphone")
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = (spacing 1 $ ResizableTall 1 (3/100) (3/5) [])
-      |||  withIM (1/3) (ClassName "Skype")  (spacing 1 $ OneBig (2/3) (2/3))
-      |||  withIM (1/3) (ClassName "Slack")  (spacing 1 $ OneBig (2/3) (2/3))
-      ||| (spacing 1 $ ThreeCol 1 (3/100) (1/2))
+myLayout = (spacing 0 $ ResizableTall 0 (3/100) (3/5) [])
+      |||  withIM (1/3) (ClassName "Skype")  (spacing 0 $ OneBig (2/3) (2/3))
+      |||  withIM (1/3) (ClassName "Slack")  (spacing 0 $ OneBig (2/3) (2/3))
+      ||| (spacing 0 $ ThreeCol 1 (3/100) (1/2))
       |||  Simplest
     where
       jdim = And (ClassName "Jdim") (Role "")
 
 myStartupHook = do
-  spawn "stalonetray --dockapp-mode simple &"
-  spawn "xdotool key alt+2"
-  spawn "feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-simplyblack.png"
+  spawn "fcitx-autostart &"
+  spawn "sleep 5; autorandr --load laptop; stalonetray --dockapp-mode simple &"
   spawn "volnoti"
   spawn "setxkbmap -layout jp"
   spawn "urxvtd -o -f"
@@ -134,13 +135,11 @@ myStartupHook = do
   spawn "killall dunst; dunst &"
   --spawn "pulseaudio --kill; pulseaudio --start && sleep 1&& pasystray"
   spawn "pasystray"
-  spawn "blueman-applet &"
   spawn "mate-power-manager  2>&1 > /dev/null &"
-  spawn "autorandr --load laptop"
-  spawn "fcitx-autostart &"
   spawn "urxvt -pe tabbed,kuake  &"
   spawn "libinput-gestures-setup start &"
   spawn "sleep 3 && xdotool key \"alt+c\" && xdotool key \"alt+c\""
+  spawn "feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-simplyblack.png"
 --  spawn "xinput --set-prop \"SynPS/2 Synaptics TouchPad\" \"Device Enabled\" 0"
 
 myManageHookShift = composeAll
