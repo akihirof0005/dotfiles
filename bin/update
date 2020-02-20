@@ -11,6 +11,8 @@ if [ "$(uname)" == 'Darwin' ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   if [ -e /etc/arch-release ]; then
     yay -Syu; paccache -r; paccache -ruk0 
+    sudo grub-mkconfig -o /boot/grub/grub.cfg 
+    xmonad --recompile
   elif [ -e /etc/lsb-release ]; then
     sudo apt update
     sudo apt upgrade
@@ -20,10 +22,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     sudo apt upgrade
     sudo apt autoremove
 
-elif [ "$(expr substr $(uname -m) 1 7)" == 'aarch64' ]; then
-pkg update
-pkg upgrade
-pkg install neovim openssh zsh   rust
-termux-setup-storage
-fi
+  elif [ "$(expr substr $(uname -m) 1 7)" == 'aarch64' ]; then
+    pkg update
+    pkg upgrade
+    pkg install neovim openssh zsh   rust
+    termux-setup-storage
   fi
+fi
