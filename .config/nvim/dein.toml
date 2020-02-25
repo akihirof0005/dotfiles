@@ -68,3 +68,9 @@ on_ft = ['groovy']
 [[plugins]]
 repo= 'scrooloose/nerdtree'
 
+[[plugins]]
+repo= 'rust-lang/rust.vim'
+
+[[plugins]]
+repo = 'neovim/nvim-lsp'
+

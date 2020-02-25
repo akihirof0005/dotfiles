@@ -83,3 +83,4 @@ elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
 fi
 export EDITOR=nvim
+export TERM=xterm-256color

@@ -8,14 +8,6 @@ set fileencodings=utf-8,euc-jp,cp932
 set fileformats=unix,dos,mac
 set ambiwidth=double
 
-" Tab & Indent
-set expandtab
-set tabstop=2
-set autoindent
-set shiftwidth=2
-set expandtab
-set softtabstop=2
-set showmatch
 
 " View
 set number
@@ -68,3 +60,12 @@ nnoremap s <Nop>
 nnoremap sw <C-w>w
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
+
+" Tab & Indent
+set showmatch
+set autoindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+lua require'nvim_lsp'.tsserver.setup{}
