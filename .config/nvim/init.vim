@@ -22,8 +22,6 @@ source $VIMRUNTIME/macros/matchit.vim
 " Command
 set wildmenu
 set history=5000
-set backupdir=$HOME/dotfiles/filebackup
-let &directory = &backupdir
 
 if &compatible
   set nocompatible
@@ -44,18 +42,6 @@ set t_Co=256
 
 :command UP UpdateRemotePlugins
 
-if &term =~ "xterm"
-    let &t_SI .= "\e[?2004h"
-    let &t_EI .= "\e[?2004l"
-    let &pastetoggle = "\e[201~"
-
-    function XTermPasteBegin(ret)
-        set paste
-        return a:ret
-    endfunction
-
-    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
-endif
 nnoremap s <Nop>
 nnoremap sw <C-w>w
 nnoremap ss :<C-u>sp<CR>
@@ -68,4 +54,3 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-lua require'nvim_lsp'.tsserver.setup{}

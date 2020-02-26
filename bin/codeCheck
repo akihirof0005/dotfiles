@@ -1,0 +1,4 @@
+#!/bin/bash
+git clone $1 /tmp/code
+find /tmp/code -type f -print | while read s; do grep -n -H $2 ${s} ; done
+rm -rf /tmp/code

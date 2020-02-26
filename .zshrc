@@ -2,6 +2,7 @@ autoload -U compinit promptinit
 compinit
 promptinit
 prompt walters
+zstyle ':completion:*' menu select
 
 source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
