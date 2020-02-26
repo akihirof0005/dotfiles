@@ -11,8 +11,8 @@ cd ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 zsh ./installer.sh ~/.cache/dein
 
-## install zgen for zsh
-git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+## install zpugin for zsh
+ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 chsh -s /bin/zsh
 exec zsh
