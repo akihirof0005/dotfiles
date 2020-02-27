@@ -50,3 +50,4 @@ setopt share_history
 if [ $DOTFILES/.zshrc -nt ~/.zshrc.zwc ]; then
   zcompile ~/.zshrc
 fi
+PROMPT="%F{cyan}%n:$PROMPT"
