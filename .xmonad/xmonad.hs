@@ -99,7 +99,7 @@ main = do
     , ((modm , xK_s ), spawn "slack")
     , ((modm , xK_i ), spawn "chromium --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
     , ((modm , xK_n ), spawn "urxvt -e  nmtui ")
-    , ((modm , xK_z ), spawn "/usr/local/bin/jdim ")
+    , ((modm , xK_z ), spawn "/home/skit/dotfiles/bin/jd")
     , ((modm , xK_d), windows copyToAll)
     , ((modm , xK_c ), kill ) -- %! Close the focused window
     , ((modm , xK_p ), spawn "rofi -show run")

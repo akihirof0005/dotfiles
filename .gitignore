@@ -18,4 +18,7 @@
 .xmonad/xmonad.errors
 .xmonad/xmonad.hi
 .xmonad/xmonad.o
+.config/QtProject.conf
+.config/VirtualBox/*
+.config/archey3.cfg
 
