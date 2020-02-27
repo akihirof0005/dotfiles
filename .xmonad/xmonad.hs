@@ -38,6 +38,7 @@ import XMonad.Layout.Simplest
 import XMonad.Layout.SimplestFloat
 import XMonad.Layout.DragPane
 import XMonad.Layout.StackTile
+import XMonad.Layout.BinarySpacePartition
 
 import XMonad.Layout.Circle
 
@@ -111,7 +112,7 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = (spacing 0 $ OneBig (3/5) (3/5) )
+myLayout = (spacing 0 $  emptyBSP  )
       |||  withIM (1/3) (ClassName "Slack")  (spacing 0 $ OneBig (2/3) (2/3))
       |||  Simplest
     where
