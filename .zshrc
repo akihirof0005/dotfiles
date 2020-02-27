@@ -1,7 +1,4 @@
-autoload -U compinit promptinit
-compinit
-promptinit
-prompt walters
+autoload -U promptinit
 zstyle ':completion:*:default' menu select=2
 
 ### Added by Zinit's installer
@@ -20,10 +17,11 @@ autoload -Uz _zinit
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-zinit load zdharma/history-search-multi-word
+zinit light "zdharma/history-search-multi-word"
 
 zinit light "zsh-users/zsh-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
+#zinit light "dracula/zsh"
 zinit light romkatv/powerlevel10k
 
 if [ "$(uname)" = 'Darwin' ]; then
@@ -48,3 +46,7 @@ export TERM=xterm-256color
 path=($HOME/dotfiles/bin(N-/) $path)
 path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
 setopt share_history
+
+if [ $DOTFILES/.zshrc -nt ~/.zshrc.zwc ]; then
+  zcompile ~/.zshrc
+fi
