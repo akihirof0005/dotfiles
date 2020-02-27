@@ -1,3 +1,9 @@
+autoload -U compinit promptinit
+compinit
+promptinit
+prompt walters
+zstyle ':completion:*:default' menu select=2
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
@@ -6,76 +12,19 @@ if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
         print -P "%F{33}▓▒░ %F{34}Installation successful.%f" || \
         print -P "%F{160}▓▒░ The clone has failed.%f"
 fi
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit installer's chunk
-zinit light "zdharma/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+zinit load zdharma/history-search-multi-word
+
+zinit light "zsh-users/zsh-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
-
-
-autoload -U compinit promptinit
-compinit
-promptinit
-prompt walters
-
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-function rprompt-git-current-branch {
-  local branch_name st branch_status
-
-  if [ ! -e  ".git" ]; then
-    # gitで管理されていないディレクトリは何も返さない
-    return
-  fi
-  branch_name=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
-  st=`git status 2> /dev/null`
-  if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-    # 全てcommitされてクリーンな状態
-    branch_status="%F{green}"
-  elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
-    # gitに管理されていないファイルがある状態
-    branch_status="%F{green}?"
-  elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
-    # git addされていないファイルがある状態
-    branch_status="%F{green}+"
-  elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
-    # git commitされていないファイルがある状態
-    branch_status="%F{yellow}!"
-  elif [[ -n `echo "$st" | grep "^rebase in progress"` ]]; then
-    # コンフリクトが起こった状態
-    echo "%F{red}!(no branch)"
-    return
-  else
-    # 上記以外の状態の場合は青色で表示させる
-    branch_status="%F{blue}"
-  fi
-  # ブランチ名を色付きで表示する
-  echo "${branch_status}[$branch_name]"
-}
-
-# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
-setopt prompt_subst
-
-# プロンプトの右側(RPROMPT)にメソッドの結果を表示させる
-RPROMPT='`rprompt-git-current-branch`'
-
-# ここはプロンプトの設定なので今回の設定とは関係ありません
-if [ $UID -eq 0 ];then
-  # ルートユーザーの場合
-PROMPT="%F{red}%n:%f%F{green}%d%f [%m] %%
-"
-else
-  # ルートユーザー以外の場合
-PROMPT="%F{cyan}%n:%f%F{green}%d%f [%m]
-%% "
-fi
-
-path=($HOME/dotfiles/bin(N-/) $path)
-path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
-cd ~
+zinit light romkatv/powerlevel10k
 
 if [ "$(uname)" = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
@@ -93,4 +42,9 @@ fi
 export EDITOR=nvim
 export TERM=xterm-256color
 
-zstyle ':completion:*' menu select
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+path=($HOME/dotfiles/bin(N-/) $path)
+path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
+setopt share_history
