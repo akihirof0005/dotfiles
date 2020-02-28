@@ -119,28 +119,7 @@ myLayout = (spacing 0 $  emptyBSP  )
       jdim = And (ClassName "Jdim") (Role "")
 
 myStartupHook = do
-  spawn "fcitx-autostart &"
-  spawn "sleep 5; autorandr --load laptop; stalonetray --dockapp-mode simple &"
-  spawn "volnoti"
-  spawn "setxkbmap -layout jp"
-  spawn "urxvtd -o -f"
-  spawn "thunar --daemon &"
-  spawn "picom --config ~/dotfiles/.config/picom.conf -b &"
---  spawn "geary "
---  spawn "xsetroot -cursor_name left_ptr"
-  spawn "skypeforlinux"
-  spawn "slack "
-  spawn "killall nm-applet; nm-applet 2>&1 > /dev/null &"
-  spawn "mailspring &"
-  spawn "killall dunst; dunst &"
-  --spawn "pulseaudio --kill; pulseaudio --start && sleep 1&& pasystray"
-  spawn "pasystray"
-  spawn "mate-power-manager  2>&1 > /dev/null &"
-  spawn "urxvt -pe tabbed,kuake  &"
-  spawn "libinput-gestures-setup start &"
-  spawn "sleep 3 && xdotool key \"alt+c\" && xdotool key \"alt+c\""
-  spawn "feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-simplyblack.png"
---  spawn "xinput --set-prop \"SynPS/2 Synaptics TouchPad\" \"Device Enabled\" 0"
+  spawn "bash ~/dotfiles/bin/autostart > /tmp/start.log &"
 
 myManageHookShift = composeAll
   [ ]
