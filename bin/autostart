@@ -1,0 +1,18 @@
+killall stalonetray; autorandr --load laptop; stalonetray --dockapp-mode simple &
+fcitx-autostart &
+volnoti &
+setxkbmap -layout jp &
+urxvtd -o -f &
+thunar --daemon &
+picom --config ~/dotfiles/.config/picom.conf -b &
+skypeforlinux &
+slack &
+killall nm-applet; nm-applet 2>&1 > /dev/null &
+mailspring &
+killall dunst; dunst &
+pasystray &
+mate-power-manager  2>&1 > /dev/null &
+urxvt -pe tabbed,kuake  &
+libinput-gestures-setup start &
+sleep 3 && xdotool key \"alt+c\" && xdotool key \"alt+c\" &
+feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-simplyblack.png
