@@ -11,9 +11,6 @@ repo =  'scrooloose/syntastic'
 repo = 'Chiel92/vim-autoformat'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
 repo = 'w0rp/ale'
 
 [[plugins]]
@@ -57,20 +54,6 @@ repo = 'vim-scripts/groovyindent-unix'
 on_ft = ['groovy']
 
 [[plugins]]
-repo= 'scrooloose/nerdtree'
-
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = '''
-source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
-'''
-
-[[plugins]]
 repo    = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 
@@ -86,3 +69,40 @@ colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 '''
 
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+depends = 'context_filetype.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/neosnippet.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = 'context_filetype.vim'
+on_event = "InsertEnter"
+hook_add = '''
+source ~/.config/nvim/plugins/deoplete.rc.vim
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
+'''
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_add = '''
+source ~/.config/nvim/plugins/rust.rc.vim
+'''
