@@ -1,8 +1,10 @@
 set hidden
 
+" settings for languages
 let g:LanguageClient_serverCommands = {
-\ 'python': ['pyls'],
-\ }
+        \ 'cpp': ['clangd'],
+        \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+        \ }
 
 augroup LanguageClient_config
 autocmd!
@@ -11,7 +13,7 @@ autocmd User LanguageClientStopped setlocal signcolumn=auto
 augroup END
 
 let g:LanguageClient_autoStart = 1
-nnoremap <Leader>lh :call LanguageClient_textDocument_hover()<CR>
-nnoremap <Leader>ld :call LanguageClient_textDocument_definition()<CR>
-nnoremap <Leader>lr :call LanguageClient_textDocument_rename()<CR>
-nnoremap <Leader>lf :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <silent> <Space>lh :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> <Space>ld :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <Space>lr :call LanguageClient_textDocument_rename()<CR>
+nnoremap <silent> <Space>lf :call LanguageClient_textDocument_formatting()<CR>

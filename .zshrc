@@ -1,5 +1,28 @@
-autoload -U promptinit
-zstyle ':completion:*:default' menu select=2
+autoload -U compinit
+compinit
+zstyle ':completion::complete:*' use-cache true
+#zstyle ':completion:*:default' menu select true
+zstyle ':completion:*:default' menu select=1
+#大文字、小文字を区別せず補完する
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+#補完でカラーを使用する
+autoload colors
+zstyle ':completion:*' list-colors "${LS_COLORS}"
+#kill の候補にも色付き表示
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
+#コマンドにsudoを付けても補完
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+
+#予測入力させる
+autoload predict-on
+zstyle ':predict' verbose true
+
+autoload -Uz promptinit
+promptinit
+prompt redhat
+
+
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -37,17 +60,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   export SDKMAN_DIR=$HOME"/.sdkman"
   [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
 fi
-export EDITOR=nvim
-export TERM=xterm-256color
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 path=($HOME/dotfiles/bin(N-/) $path)
 path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
-setopt share_history
 
-if [ $DOTFILES/.zshrc -nt ~/.zshrc.zwc ]; then
-  zcompile ~/.zshrc
-fi
-PROMPT="%F{cyan}%n:$PROMPT"
+export EDITOR=nvim
+export TERM=xterm-256color
+setopt share_history
