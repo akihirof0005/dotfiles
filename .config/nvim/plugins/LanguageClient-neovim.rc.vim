@@ -16,4 +16,4 @@ let g:LanguageClient_autoStart = 1
 nnoremap <silent> <Space>lh :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> <Space>ld :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <Space>lr :call LanguageClient_textDocument_rename()<CR>
-nnoremap <silent> <Space>lf :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <silent> gg=G :call LanguageClient_textDocument_formatting()<CR>
