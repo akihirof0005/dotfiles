@@ -10,3 +10,4 @@ do
     ln -s "$SCRIPT_DIR/$f" "$HOME/$f"
     echo "$f"
 done
+ rm .config/.config .ssh/.ssh .xmonad/.xmonad
