@@ -85,24 +85,13 @@ source ~/.config/nvim/plugins/neosnippet.rc.vim
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = 'context_filetype.vim'
-on_event = "InsertEnter"
-hook_add = '''
-source ~/.config/nvim/plugins/deoplete.rc.vim
-'''
-
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = '''
-source ~/.config/nvim/plugins/LanguageClient-neovim.rc.vim
-'''
-
-[[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 hook_add = '''
 source ~/.config/nvim/plugins/rust.rc.vim
 '''
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+
