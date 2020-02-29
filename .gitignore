@@ -21,4 +21,5 @@
 .config/QtProject.conf
 .config/VirtualBox/*
 .config/archey3.cfg
-
+.config/.config/*
+.xmonad/.xmonad/*
