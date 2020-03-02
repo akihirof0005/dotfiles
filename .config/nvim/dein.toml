@@ -8,9 +8,6 @@ repo = 'tpope/vim-endwise'
 repo =  'scrooloose/syntastic'
 
 [[plugins]]
-repo = 'Chiel92/vim-autoformat'
-
-[[plugins]]
 repo = 'w0rp/ale'
 
 [[plugins]]
@@ -18,9 +15,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
@@ -32,41 +26,29 @@ repo = 'udalov/kotlin-vim'
 repo = 'tfnico/vim-gradle'
 
 [[plugins]]
-repo = 'kassio/neoterm'
-
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-  set laststatus=2
-  set showmode
-  set showcmd
-  set ruler
-'''
-
-[[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'vim-scripts/groovyindent-unix'
 on_ft = ['groovy']
 
 [[plugins]]
-repo    = 'vim-airline/vim-airline'
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline_powerline_fonts = 1
+'''
 depends = ['vim-airline-themes']
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'morhetz/gruvbox'
+repo = 'jacoborus/tender.vim'
 hook_add = '''
-let g:gruvbox_italic=1
-set background=dark
-colorscheme gruvbox
-let g:airline_theme = 'gruvbox'
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  syntax enable
+  colorscheme tender
+  let g:airline_theme = 'tender'
 '''
 
 [[plugins]]
