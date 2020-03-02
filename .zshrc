@@ -70,3 +70,5 @@ path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
 export EDITOR=nvim
 export TERM=xterm-256color
 setopt share_history
+
+source $HOME/.cargo/env

@@ -54,3 +54,5 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+"for format snipet
+nmap gg=G :call CocAction('format')<CR>
