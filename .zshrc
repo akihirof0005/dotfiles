@@ -1,5 +1,8 @@
-autoload -U compinit
+autoload -U compinit promptinit
 compinit
+promptinit
+prompt redhat
+
 zstyle ':completion::complete:*' use-cache true
 #zstyle ':completion:*:default' menu select true
 zstyle ':completion:*:default' menu select=1
@@ -16,12 +19,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 #予測入力させる
 autoload predict-on
 zstyle ':predict' verbose true
-
-autoload -Uz promptinit
-promptinit
-prompt redhat
-
-
 
 
 ### Added by Zinit's installer
