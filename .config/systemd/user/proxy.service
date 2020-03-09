@@ -1,0 +1,10 @@
+[Unit]
+Description=glycosmos開発用proxy
+
+[Service]
+Type=simple
+ExecStart= ssh -fND 1080 fumidai
+
+[Install]
+WantedBy=default.target
+
