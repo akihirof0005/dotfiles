@@ -3,7 +3,7 @@ Description=glycosmos開発用proxy
 
 [Service]
 Type=simple
-ExecStart= ssh -fND 1080 fumidai
+ExecStart=ssh -ND 1080 -o ServerAliveInterval=60 fumidai
 
 [Install]
 WantedBy=default.target
