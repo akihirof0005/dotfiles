@@ -24,3 +24,11 @@
 .config/.config/*
 .xmonad/.xmonad/*
 .config/coc/*
+.config/dconf
+.config/systemd/user/default.target.wants
+.config/lxc/
+.config/nvim/.netrwhist
+.config/tlpui/
+bin/proxy
+
+
