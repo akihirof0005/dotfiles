@@ -3,6 +3,29 @@ compinit
 promptinit
 prompt redhat
 
+# 履歴ファイルの保存先
+HISTFILE=~/.zsh_history
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=10000000
+# 重複を記録しない
+setopt hist_ignore_dups
+# 開始と終了を記録
+setopt EXTENDED_HISTORY
+# historyを共有
+setopt share_history
+# ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
+setopt hist_ignore_all_dups
+# スペースで始まるコマンド行はヒストリリストから削除
+setopt hist_ignore_space
+# ヒストリを呼び出してから実行する間に一旦編集可能
+setopt hist_verify
+# 余分な空白は詰めて記録
+setopt hist_reduce_blanks
+# コマンドミスを修正
+setopt correct
+
 zstyle ':completion::complete:*' use-cache true
 #zstyle ':completion:*:default' menu select true
 zstyle ':completion:*:default' menu select=1
@@ -19,7 +42,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 #予測入力させる
 autoload predict-on
 zstyle ':predict' verbose true
-
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -62,7 +84,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 path=($HOME/dotfiles/bin(N-/) $path)
-path=($HOME/.gem/ruby/2.6.0/bin(N-/) $path)
+path=($HOME/.gem/ruby/2.7.0/bin(N-/) $path)
 
 export EDITOR=nvim
 export TERM=xterm-256color
