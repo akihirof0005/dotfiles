@@ -77,3 +77,8 @@ source ~/.config/nvim/plugins/rust.rc.vim
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 
+[[plugins]]
+repo = 'ruby-formatter/rufo-vim'
+hook_add = '''
+let g:rufo_auto_formatting = 1
+'''

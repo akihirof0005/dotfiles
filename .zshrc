@@ -91,3 +91,4 @@ export TERM=xterm-256color
 setopt share_history
 
 source $HOME/.cargo/env
+### End of Zinit's installer chunk
