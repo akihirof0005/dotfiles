@@ -64,7 +64,7 @@ zinit light "zdharma/history-search-multi-word"
 zinit light "zsh-users/zsh-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 #zinit light "dracula/zsh"
-zinit light romkatv/powerlevel10k
+#zinit light romkatv/powerlevel10k
 
 if [ "$(uname)" = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
@@ -81,7 +81,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 path=($HOME/dotfiles/bin(N-/) $path)
 path=($HOME/.gem/ruby/2.7.0/bin(N-/) $path)
@@ -91,3 +91,5 @@ export TERM=xterm-256color
 setopt share_history
 
 source $HOME/.cargo/env
+source $HOME/dotfiles/theme.zsh
+### End of Zinit's installer chunk
