@@ -29,6 +29,6 @@
 .config/lxc/
 .config/nvim/.netrwhist
 .config/tlpui/
-bin/proxy
-
+.config/Unknown Organization/*
+.config/zoomus.con
 
