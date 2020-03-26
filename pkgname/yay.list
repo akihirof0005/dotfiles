@@ -11,11 +11,13 @@ google-chrome
 gopls
 grub-themes-solarized-dark-materialized
 gvolwheel
+jade-application-kit
 jdim-git
 lib32-libstdc++5
 libinput-gestures
 mailspring
 mkinitcpio-autofsck
+ms-office-online
 nerd-fonts-inconsolata-go
 nerd-fonts-meslo
 nerd-fonts-ricty
@@ -32,6 +34,7 @@ thunar-shares-plugin
 tlpui-git
 ttf-meslo
 ttf-migu
+ttf-ricty
 uswsusp-git
 virtualbox-ext-oracle
 volnoti
