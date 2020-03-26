@@ -56,3 +56,7 @@ set shiftwidth=2
 
 "for format snipet
 nmap gg=G :call CocAction('format')<CR>
+
+"for COPY&PASTE install xclip
+set clipboard+=unnamedplus
+se ff=unix
