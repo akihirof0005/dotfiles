@@ -15,4 +15,5 @@ mate-power-manager  2>&1 > /dev/null &
 urxvt -pe tabbed,kuake  &
 libinput-gestures-setup start &
 sleep 3 && xdotool key \"alt+c\" && xdotool key \"alt+c\" &
+blueberry-tray &
 feh --bg-scale /usr/share/backgrounds/archlinux/archlinux-simplyblack.png
