@@ -112,14 +112,14 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = (spacing 0 $  emptyBSP  )
-      |||  withIM (1/3) (ClassName "Slack")  (spacing 0 $ OneBig (2/3) (2/3))
+myLayout = (spacing 3 $  emptyBSP  )
+      |||  withIM (1/3) (ClassName "Slack")  (spacing 3 $ OneBig (2/3) (2/3))
       |||  Simplest
     where
       jdim = And (ClassName "Jdim") (Role "")
 
 myStartupHook = do
-  spawn "bash ~/dotfiles/bin/autostart > /tmp/start.log &"
+  spawn "bash ~/dotfiles/.bin/autostart > /tmp/start.log &"
 
 myManageHookShift = composeAll
   [ ]
