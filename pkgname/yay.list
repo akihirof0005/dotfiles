@@ -2,6 +2,7 @@ archlinux-themes-sddm
 batify
 brscan4
 c9.core
+chromedriver
 deb2targz
 fcitx-skin-material
 flat-remix-git
@@ -16,15 +17,19 @@ jdim-git
 lib32-libstdc++5
 libinput-gestures
 mailspring
+mendeleydesktop-bundled
 mkinitcpio-autofsck
 ms-office-online
+nerd-fonts-inconsolata
 nerd-fonts-inconsolata-go
 nerd-fonts-meslo
 nerd-fonts-ricty
 nvm
 ocfs2-tools
+pygtk
 python2-distutils-extra
 rbenv
+remmina-plugin-rdesktop
 ruby-build
 sddm-archlinux-theme-git
 skypeforlinux-stable-bin
@@ -40,3 +45,4 @@ virtualbox-ext-oracle
 volnoti
 xpub
 yay
+zoom
