@@ -92,3 +92,4 @@ setopt share_history
 
 source $HOME/.cargo/env
 source $HOME/dotfiles/theme.zsh
+### End of Zinit's installer chunk
