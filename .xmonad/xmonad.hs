@@ -80,7 +80,7 @@ main = do
 --  xmonad $  docks $ ewmh def
   xmonad $  docks $ def
     { borderWidth = 1
-    , terminal = "urxvtc"
+    , terminal = "alacritty"
     , normalBorderColor = colorGray
     , focusedBorderColor = colorGreen
     , startupHook = myStartupHook
@@ -98,7 +98,9 @@ main = do
     , ((modm , xK_b ), spawn "xfce4-screenshooter")
     , ((modm , xK_s ), spawn "slack")
     , ((modm , xK_i ), spawn "chromium --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
-    , ((modm , xK_n ), spawn "urxvt -e  nmtui ")
+--    , ((modm , xK_n ), spawn "alacritty -e  nmtui ")
+--    , ((modm , xK_t ), spawn "alacritty -e tw")
+    , ((modm , xK_t ), spawn "tv")
     , ((modm , xK_z ), spawn "/home/skit/dotfiles/bin/jd")
     , ((modm , xK_d), windows copyToAll)
     , ((modm , xK_c ), kill ) -- %! Close the focused window
