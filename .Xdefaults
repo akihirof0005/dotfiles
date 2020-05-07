@@ -22,11 +22,11 @@ URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 ! Fonts
-URxvt*font: xft:Ricty\ Diminished\ for\ Powerline:style=Regular:size=14:antialias=true
-URxvt.font:              xft:Ricty\ Diminished\ for\ Powerline:size=14:antialiase=true:hinting=true
-URxvt.boldFont:          xft:Ricty\ Diminished\ for\ Powerline:bold:size=14:antialiase=true:hinting=true
-URxvt.italicFont:        xft:Ricty\ Diminished\ for\ Powerline:italic:size=14:antialiase=true:hinting=true
-URxvt.bolditalicFont:    xft:Ricty\ Diminished\ for\ Powerline:bold:italic:size=14:antialiase=true:hinting=true
+URxvt*font: xft:Ricty=Regular:size=14:antialias=true
+URxvt.font:              xft:Ricty:size=14:antialiase=true:hinting=true
+URxvt.boldFont:          xft:Ricty:bold:size=14:antialiase=true:hinting=true
+URxvt.italicFont:        xft:Ricty:italic:size=14:antialiase=true:hinting=true
+URxvt.bolditalicFont:    xft:Ricty:bold:italic:size=14:antialiase=true:hinting=true
 
 Rxvt.kuake.hotkey: F12
 
