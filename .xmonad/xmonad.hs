@@ -97,11 +97,11 @@ main = do
     , ((modm , xK_m ), spawn "/usr/share/mailspring/mailspring")
     , ((modm , xK_b ), spawn "xfce4-screenshooter")
     , ((modm , xK_s ), spawn "slack")
-    , ((modm , xK_i ), spawn "chromium --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
+    , ((modm , xK_i ), spawn "google-chrome-stable --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
 --    , ((modm , xK_n ), spawn "alacritty -e  nmtui ")
 --    , ((modm , xK_t ), spawn "alacritty -e tw")
     , ((modm , xK_t ), spawn "tv")
-    , ((modm , xK_z ), spawn "/home/skit/dotfiles/bin/jd")
+    , ((modm , xK_z ), spawn "/home/skit/dotfiles/.bin/jd")
     , ((modm , xK_d), windows copyToAll)
     , ((modm , xK_c ), kill ) -- %! Close the focused window
     , ((modm , xK_p ), spawn "rofi -show run")
