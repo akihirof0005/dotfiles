@@ -32,3 +32,9 @@
 .config/Unknown Organization/*
 .config/zoomus.con
 .config/zoomus.conf
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
