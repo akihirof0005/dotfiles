@@ -825,7 +825,6 @@ picom
 pinentry
 pixman
 pkgconf
-pm2ml
 polkit
 polkit-qt5
 poppler
@@ -833,7 +832,6 @@ poppler-glib
 popt
 portaudio
 potrace
-powerpill
 procps-ng
 protobuf
 psmisc
@@ -921,9 +919,6 @@ python2-packaging
 python2-pyparsing
 python2-setuptools
 python2-six
-python3-memoizedb
-python3-xcgf
-python3-xcpf
 qpdf
 qt5-base
 qt5-declarative
