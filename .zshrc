@@ -83,8 +83,6 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-path=($HOME/dotfiles/bin(N-/) $path)
-path=($HOME/.gem/ruby/2.7.0/bin(N-/) $path)
 
 export EDITOR=nvim
 export TERM=xterm-256color
