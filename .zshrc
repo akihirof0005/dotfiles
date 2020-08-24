@@ -64,7 +64,6 @@ zinit light "zdharma/history-search-multi-word"
 zinit light "zsh-users/zsh-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 #zinit light "dracula/zsh"
-#zinit light romkatv/powerlevel10k
 
 if [ "$(uname)" = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
