@@ -17,6 +17,13 @@ zsh ./installer.sh ~/.cache/dein
 ## install Rust for *nix
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+## install sdk system 
+ curl -s "https://get.sdkman.io" | bash
+ source "~/.sdkman/bin/sdkman-init.sh"
+ sdk install java 14.0.2.j9-adpt
+ sdk install gradle
+ sdk install kotlin
+
 chsh -s /bin/zsh
 exec zsh
 
