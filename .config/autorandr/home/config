@@ -11,6 +11,7 @@ primary
 rate 60.05
 output HDMI-A-0
 crtc 1
-mode 1920x1080
-pos 1921x0
-rate 60.00
+mode 1680x1050
+pos 1920x0
+rate 59.95
+rotate left
