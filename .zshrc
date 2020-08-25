@@ -64,7 +64,6 @@ zinit light "zdharma/history-search-multi-word"
 zinit light "zsh-users/zsh-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 #zinit light "dracula/zsh"
-#zinit light romkatv/powerlevel10k
 
 if [ "$(uname)" = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
@@ -78,6 +77,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
   export SDKMAN_DIR=$HOME"/.sdkman"
   [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
+    if [ -e /etc/lsb-release ]; then
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    fi
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -90,4 +93,3 @@ setopt share_history
 
 source $HOME/.cargo/env
 source $HOME/dotfiles/theme.zsh
-### End of Zinit's installer chunk
