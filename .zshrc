@@ -69,11 +69,6 @@ if [ "$(uname)" = 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
 elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   eval "$(rbenv init -)"
-
-  [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-  source /usr/share/nvm/nvm.sh
-  source /usr/share/nvm/bash_completion
-  source /usr/share/nvm/install-nvm-exec
   #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
   export SDKMAN_DIR=$HOME"/.sdkman"
   [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
@@ -83,9 +78,12 @@ elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
     fi
 fi
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 export EDITOR=nvim
 export TERM=xterm-256color
@@ -93,3 +91,6 @@ setopt share_history
 
 source $HOME/.cargo/env
 source $HOME/dotfiles/theme.zsh
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
