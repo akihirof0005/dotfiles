@@ -72,19 +72,19 @@ elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
   export SDKMAN_DIR=$HOME"/.sdkman"
   [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
-    if [ -e /etc/lsb-release ]; then
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    fi
 fi
 
 # nvm
+nvm() {
+    # まず仮の nvm コマンドを unset
+    unset -f nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+ nvm "$@"
+}
 export EDITOR=nvim
 export TERM=xterm-256color
 setopt share_history
