@@ -94,3 +94,5 @@ source $HOME/dotfiles/theme.zsh
 ### End of Zinit's installer chunk
 ### End of Zinit's installer chunk
 ### End of Zinit's installer chunk
+setopt prompt_cr
+setopt prompt_sp
