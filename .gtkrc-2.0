@@ -1,3 +1,3 @@
-gtk-icon-theme-name = "Papirus"
-gtk-theme-name = "Materia"
+gtk-icon-theme-name = "Arc-ICONS"
+gtk-theme-name = "Arc-Dark"
 gtk-application-prefer-dark-theme = true
