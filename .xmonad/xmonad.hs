@@ -52,6 +52,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Hooks.EwmhDesktops
 import Data.Ratio ((%))
 
+import XMonad.Hooks.EwmhDesktops
 myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 "," 5 "," 6 "," 7 "," 8 "," 9 "]
 
 modm = mod1Mask
@@ -87,9 +88,10 @@ main = do
     , manageHook = placeHook myPlacement <+> myManageHookShift <+> myManageHookFloat <+> manageDocks
     , layoutHook = toggleLayouts (noBorders Full) $ avoidStruts $ myLayout
     , logHook = myLogHook wsbar
-    , handleEventHook = fadeWindowsEventHook
+    , handleEventHook = fullscreenEventHook
     , workspaces = myWorkspaces
-    , modMask = modm }
+    , modMask = modm
+    }
 
     `additionalKeys`
     [ ((modm , xK_w ), spawn "google-chrome-stable")
