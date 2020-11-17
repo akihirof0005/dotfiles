@@ -34,6 +34,9 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
     bindsym $mod+Right exec pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
     bindsym $mod+left exec headphone
 
+    bindsym $mod+Tab layout tabbed
+    bindsym $mod+Space layout toggle split
+
 #
 # Moving around:
 #
@@ -135,13 +138,58 @@ output "*" background /usr/share/backgrounds/archlinux/simple.png fit
 # Read `man 5 sway-bar` for more information about this section.
 #
 
-bar {
-  status_command i3status
-}
 include /etc/sway/config.d/*
 input * {
     xkb_layout "jp,us"
 }
 input <identifier> xkb_model "pc104"
 
-exec --no-startup-id /home/skit/dotfiles/.bin/autostart
+
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
+
+
+output DVI-D-1 res 1920x1080 pos 0 0
+output VGA-1 res 1920x1080 pos 0 1080
+output HDMI-A-1 transform 270 res 1680x1050 pos 1920 420
+
+exec --no-startup-id fcitx-autostart &
+exec --no-startup-id volnoti &
+exec --no-startup-id picom --config ~/dotfiles/.config/picom.conf -b &
+exec --no-startup-id thunar --daemon &
+exec --no-startup-id skypeforlinux &
+exec --no-startup-id slack &
+exec --no-startup-id killall  nm-applet ; nm-applet 2>&1 > /dev/null &
+exec --no-startup-id mailspring &
+exec --no-startup-id redshift-gtk &
+exec --no-startup-id blueberry-tray &
+exec --no-startup-id libinput-gestures-setup start &
+exec --no-startup-id mate-power-manager  2>&1 > /dev/null &
+exec --no-startup-id killall dunst; dunst &
+exec --no-startup-id pulseaudio --start;
+exec --no-startup-id pasystray &
+exec --no-startup-id xset s off -dpms
+
+
+
+
+
+
+
+
+
+
+
+
