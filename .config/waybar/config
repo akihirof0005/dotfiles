@@ -1,0 +1,144 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "sway/workspaces",
+        "custom/layout",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "custom/tv",
+        "tray",
+        "backlight",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "network",
+        "battery",
+        "clock",
+        "clock#msk",
+        "clock#tsk"
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        //"all-outputs": true,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "custom/layout": {
+        "format": "[{}]",
+        "return-type": "json",
+        "tooltip": true,
+        "escape": true,
+        "exec": "~/.config/waybar/layout-indicator.py"
+    },
+    "custom/media": {
+        "format": "{}",
+        "return-type": "json",
+        "tooltip": true,
+        "max-length": 50,
+        "on-click": "playerctl play-pause",
+        "format-icons": {
+            "spotify": "",
+            "default": ""
+        },
+        "escape": true,
+        "exec": "~/.config/waybar/mediaplayer.py 2>/dev/null"
+    },
+    "custom/tv": {
+        "format": "tv",
+        "on-click": "mpv ~/tv.m3u8"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "spacing": 5
+    },
+    "clock": {
+        "format": "{:%a %b %d %R}",
+        "tooltip": false
+    },
+    "clock#tsk": {
+        "format": "{:%H}T",
+        "locale": "ru_RU.UTF-8",
+        "timezone": "Asia/Novosibirsk",
+        "tooltip-format": "<b>Томск</b>\n{:%a %d %b %R %z}\n\n{calendar}"
+    },
+    "clock#msk": {
+        "format": "{:%H}M",
+        "locale": "ru_RU.UTF-8",
+        "timezone": "Europe/Moscow",
+        "tooltip-format": "<b>Москва</b>\n{:%a %d %b %R %z}"
+    },
+    "cpu": {
+        "format": "{usage:2}% ",
+        "interval": 5,
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{:2}% "
+    },
+    "backlight": {
+        "format": "{percent:2}% {icon}",
+        "format-icons": ["", ""],
+        "on-scroll-up": "light -A 1 >/dev/null",
+        "on-scroll-down": "light -U 1 >/dev/null"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity:2}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%): {ipaddr}/{cidr} ",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "tooltip-format-disconnected": "Disconnected ⚠",
+                 "on-click": "alacritty -e  nmtui"
+    },
+    "pulseaudio": {
+         "format": "{volume:2}% {icon}",
+         "format-bluetooth": "{volume:2}% {icon}",
+         "format-muted": "",
+         "format-icons": {
+             "headphone": "",
+             "headphones": "",
+             "hands-free": "",
+             "handsfree": "",
+             "headset": "",
+             "phone": "",
+             "portable": "",
+             "car": "",
+             "default": ["", ""]
+         },
+         "on-click": "pavucontrol"
+     }
+}
+

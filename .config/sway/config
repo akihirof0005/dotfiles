@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 set $term WINIT_UNIX_BACKEND=x11 alacritty
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu WINIT_UNIX_BACKEND=x11 rofi -show run
 
 ### Key bindings
 
@@ -21,8 +21,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
     bindsym $mod+Shift+Return exec $term
     bindsym $mod+p exec $menu
 
-    bindsym $mod+w exec google-chrome-stable
-    bindsym $mod+f exec thunar
+    bindsym $mod+w exec WINIT_UNIX_BACKEND=x11 google-chrome-stable
+    bindsym $mod+f exec WINIT_UNIX_BACKEND=x11 thunar
     bindsym $mod+m exec /usr/share/mailspring/mailspring
     bindsym $mod+b exec xfce4-screenshooter
     bindsym $mod+s exec slack
@@ -137,6 +137,13 @@ output "*" background /usr/share/backgrounds/archlinux/simple.png fit
 #
 # Read `man 5 sway-bar` for more information about this section.
 #
+bar {
+    swaybar_command waybar
+    position top
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+#   status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+}
 
 include /etc/sway/config.d/*
 input * {
@@ -144,42 +151,20 @@ input * {
 }
 input <identifier> xkb_model "pc104"
 
-
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-
-
-
 output DVI-D-1 res 1920x1080 pos 0 0
 output DP-3 res 1920x1080 pos 0 1080
 output HDMI-A-1 transform 270 res 1680x1050 pos 1920 420
 
 exec --no-startup-id fcitx-autostart &
 exec --no-startup-id volnoti &
-exec --no-startup-id picom --config ~/dotfiles/.config/picom.conf -b &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id skypeforlinux &
-exec --no-startup-id slack &
+exec --no-startup-id slack -su &
 exec --no-startup-id killall  nm-applet ; nm-applet 2>&1 > /dev/null &
-exec --no-startup-id mailspring &
+exec --no-startup-id WINIT_UNIX_BACKEND=x11 mailspring -b &
 exec --no-startup-id redshift-gtk &
-exec --no-startup-id blueberry-tray &
 exec --no-startup-id libinput-gestures-setup start &
-exec --no-startup-id mate-power-manager  2>&1 > /dev/null &
 exec --no-startup-id killall dunst; dunst &
 exec --no-startup-id pulseaudio --start;
 exec --no-startup-id pasystray &
-exec --no-startup-id xset s off -dpms
-
 
