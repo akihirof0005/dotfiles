@@ -78,8 +78,8 @@ main :: IO ()
 main = do
   wsbar <- spawnPipe myWsBar
 --  xmonad $  docks $ ewmh kdeConfig
---  xmonad $  docks $ ewmh def
-  xmonad $  docks $ def
+  xmonad $  docks $ ewmh def
+  --xmonad $  docks $ def
     { borderWidth = 1
     , terminal = "alacritty"
     , normalBorderColor = colorGray
@@ -88,7 +88,7 @@ main = do
     , manageHook = placeHook myPlacement <+> myManageHookShift <+> myManageHookFloat <+> manageDocks
     , layoutHook = toggleLayouts (noBorders Full) $ avoidStruts $ myLayout
     , logHook = myLogHook wsbar
-    , handleEventHook = fullscreenEventHook
+    , handleEventHook = fadeWindowsEventHook
     , workspaces = myWorkspaces
     , modMask = modm
     }
@@ -116,9 +116,8 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = (spacing 3 $  emptyBSP  )
-      |||  withIM (1/3) (ClassName "Slack")  (spacing 3 $ OneBig (2/3) (2/3))
-      |||  Simplest
+myLayout = withIM (1/3) (ClassName "Skype") (spacing 3 $  emptyBSP  )
+      ||| Simplest
     where
       jdim = And (ClassName "Jdim") (Role "")
 

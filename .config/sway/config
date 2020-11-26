@@ -36,6 +36,7 @@ set $menu WINIT_UNIX_BACKEND=x11 rofi -show run
 
     bindsym $mod+Tab layout tabbed
     bindsym $mod+Space layout toggle split
+    bindsym $mod+Return fullscreen
 
 #
 # Moving around:
@@ -152,7 +153,7 @@ input * {
 input <identifier> xkb_model "pc104"
 
 output DVI-D-1 res 1920x1080 pos 0 0
-output DP-3 res 1920x1080 pos 0 1080
+output VGA-1 res 1920x1080 pos 0 1080
 output HDMI-A-1 transform 270 res 1680x1050 pos 1920 420
 
 exec --no-startup-id fcitx-autostart &
@@ -166,3 +167,4 @@ exec --no-startup-id redshift-gtk &
 exec --no-startup-id libinput-gestures-setup start &
 exec --no-startup-id killall dunst; dunst &
 
+default_border none
