@@ -116,7 +116,7 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = withIM (1/3) (ClassName "Skype") (spacing 3 $  emptyBSP  )
+myLayout = withIM (1/5) (ClassName "Skype") (spacing 3 $  emptyBSP  )
       ||| Simplest
     where
       jdim = And (ClassName "Jdim") (Role "")
