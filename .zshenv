@@ -5,3 +5,4 @@ if [ -n "$DESKTOP_SESSION" ];then
 fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$PATH:$HOME/.bin"
+source "$HOME/.cargo/env"

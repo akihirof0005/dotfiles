@@ -8,3 +8,8 @@ fallback "sysdefault"
 }
 pcm.!default "pulse"
 ctl.!default "pulse"
+defaults.pcm.rate_converter "samplerate_best"
+pcm.dsp {
+   type plug
+   slave.pcm "dmix"
+}
