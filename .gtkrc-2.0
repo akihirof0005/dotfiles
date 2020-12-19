@@ -1,3 +1,3 @@
-gtk-icon-theme-name = "Arc"
-gtk-theme-name = "Arc-Dark"
+gtk-icon-theme-name = "Yaru"
+gtk-theme-name = "Yaru-dark"
 gtk-application-prefer-dark-theme = true
