@@ -94,7 +94,7 @@ main = do
     }
 
     `additionalKeys`
-    [ ((modm , xK_w ), spawn "google-chrome-stable")
+    [ ((modm , xK_w ), spawn "firefox")
     , ((modm , xK_f ), spawn "thunar")
     , ((modm , xK_m ), spawn "/usr/share/mailspring/mailspring")
     , ((modm , xK_b ), spawn "xfce4-screenshooter")
