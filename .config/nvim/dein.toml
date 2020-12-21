@@ -82,3 +82,12 @@ repo = 'ruby-formatter/rufo-vim'
 hook_add = '''
 let g:rufo_auto_formatting = 1
 '''
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'rust': ['rustfmt'],
+\}
+let g:ale_rustfmt_executable = 'rustfmt'
+'''
