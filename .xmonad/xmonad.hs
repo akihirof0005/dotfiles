@@ -99,7 +99,7 @@ main = do
     , ((modm , xK_m ), spawn "/usr/share/mailspring/mailspring")
     , ((modm , xK_b ), spawn "xfce4-screenshooter")
     , ((modm , xK_s ), spawn "slack")
-    , ((modm , xK_i ), spawn "google-chrome-stable --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html")
+--    , ((modm , xK_i ), spawn "wine .wine/drive_c/users/skit/Local\ Settings/Application\ Data/LINE/bin/LineLauncher.exe &")
 --    , ((modm , xK_n ), spawn "alacritty -e  nmtui ")
 --    , ((modm , xK_t ), spawn "alacritty -e tw")
     , ((modm , xK_t ), spawn "tv")
@@ -116,10 +116,8 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = withIM (1/5) (ClassName "Skype") (spacing 3 $  emptyBSP  )
-      ||| Simplest
-    where
-      jdim = And (ClassName "Jdim") (Role "")
+myLayout = withIM (1/5) (ClassName "Thunar") (spacing 3 $  emptyBSP  )
+      |||  noBorders Full
 
 myStartupHook = do
   spawn "bash ~/dotfiles/.bin/autostart > /tmp/start.log &"

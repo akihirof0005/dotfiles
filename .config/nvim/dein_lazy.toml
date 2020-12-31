@@ -2,5 +2,3 @@
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'

@@ -35,8 +35,6 @@ node -v
 
 ## install Ruby
 
-
 chsh -s /bin/zsh
 exec zsh
-
 
