@@ -35,6 +35,7 @@ if dein#load_state('~/.cache/dein')
 endif
 if dein#check_install()
   call dein#install()
+  source ~/.bin/cocplugins
 endif
 
 syntax enable
@@ -59,4 +60,4 @@ nmap gg=G :call CocAction('format')<CR>
 
 "for COPY&PASTE install xclip
 set clipboard+=unnamedplus
-se ff=unix
+set ff=unix

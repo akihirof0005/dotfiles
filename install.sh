@@ -16,6 +16,8 @@ zsh ./installer.sh ~/.cache/dein
 
 ## install Rust for *nix
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rls rust-analysis rust-src
+rustup component add rustfmt
 
 ## install sdk system 
  curl -s "https://get.sdkman.io" | bash

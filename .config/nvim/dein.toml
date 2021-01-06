@@ -95,6 +95,8 @@ repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 hook_add = '''
 source ~/.config/nvim/plugins/rust.rc.vim
+let g:rustfmt_autosave = 1
+nmap gg=G :rustfmt
 '''
 
 #LSP server
@@ -107,30 +109,30 @@ rev = 'release'
 #hook_add = '''
 #let g:rufo_auto_formatting = 1
 #'''
-[[plugins]]
-repo = 'neoclide/coc-css'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-html'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-python'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-yaml'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-json'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-vimtex'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-java'
-depends = 'coc.nvim'
-[[plugins]]
-repo = 'neoclide/coc-rls'
-depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-css'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-html'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-python'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-yaml'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-json'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-vimtex'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-java'
+#depends = 'coc.nvim'
+#[[plugins]]
+#repo = 'neoclide/coc-rls'
+#depends = 'coc.nvim'
 
 # toml lsp client
 # https://www.npmjs.com/package/coc-toml
