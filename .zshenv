@@ -6,3 +6,7 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$PATH:$HOME/.bin"
 source "$HOME/.cargo/env"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
