@@ -21,7 +21,7 @@ set $menu WINIT_UNIX_BACKEND=x11 rofi -show run
     bindsym $mod+Shift+Return exec $term
     bindsym $mod+p exec $menu
 
-    bindsym $mod+w exec WINIT_UNIX_BACKEND=x11 google-chrome-stable
+    bindsym $mod+w exec WINIT_UNIX_BACKEND=x11 firefox
     bindsym $mod+f exec WINIT_UNIX_BACKEND=x11 thunar
     bindsym $mod+m exec /usr/share/mailspring/mailspring
     bindsym $mod+b exec xfce4-screenshooter
@@ -160,6 +160,7 @@ exec --no-startup-id fcitx-autostart &
 exec --no-startup-id volnoti &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id skypeforlinux &
+exec --no-startup-id skypeforlinux --secondary --datapath="/home/skit/.config/skypeforlinux/data2" &
 exec --no-startup-id slack -su &
 exec --no-startup-id killall  nm-applet ; nm-applet 2>&1 > /dev/null &
 exec --no-startup-id WINIT_UNIX_BACKEND=x11 mailspring -b &

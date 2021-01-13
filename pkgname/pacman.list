@@ -126,7 +126,6 @@ dialog
 diffutils
 discord
 djvulibre
-dkms
 dmapi
 dmenu
 dmidecode
@@ -561,7 +560,6 @@ lib32-lz4
 lib32-mesa
 lib32-ncurses
 lib32-nettle
-lib32-nvidia-utils
 lib32-ocl-icd
 lib32-openal
 lib32-openssl
@@ -610,7 +608,6 @@ libcdr
 libclc
 libcloudproviders
 libcmis
-libco
 libconfig
 libcroco
 libcups
@@ -870,9 +867,9 @@ linux
 linux-api-headers
 linux-firmware
 linux-headers
-linux-zen
+linux-lts
+linux-lts-headers
 linux-zen-docs
-linux-zen-headers
 lirc
 llvm-libs
 lm_sensors
@@ -923,6 +920,7 @@ mplayer
 mpv
 msgpack-c
 mtdev
+mtools
 mujs
 mupdf
 ncurses
@@ -945,12 +943,10 @@ npm
 npth
 nspr
 nss
+ntfs-3g
 ntp
 numactl
 nuspell
-nvidia
-nvidia-dkms
-nvidia-utils
 nvme-cli
 oath-toolkit
 obs-studio
@@ -971,6 +967,9 @@ openssl
 opus
 orc
 osinfo-db
+otf-ipaexfont
+otf-ipafont
+otf-ipamjfont
 p11-kit
 p7zip
 pacman
@@ -1155,7 +1154,6 @@ python-zipp
 python2
 python2-appdirs
 python2-cairo
-python2-gobject2
 python2-numpy
 python2-ordered-set
 python2-packaging
@@ -1247,7 +1245,6 @@ spice
 spice-gtk
 spirv-tools
 sqlite
-sqlite-replication
 squashfs-tools
 sratom
 srt
@@ -1255,6 +1252,7 @@ sshfs
 stalonetray
 startup-notification
 streamlink
+stress
 sudo
 suil
 svt-hevc
@@ -1346,7 +1344,6 @@ webrtc-audio-processing
 wget
 which
 wildmidi
-wine-gecko
 wine-mono
 wine-staging
 winetricks
@@ -1358,6 +1355,7 @@ wpa_supplicant
 wpebackend-fdo
 wqy-zenhei
 wxgtk-common
+wxgtk2
 wxgtk3
 x264
 x265
@@ -1376,7 +1374,7 @@ xdg-dbus-proxy
 xdg-utils
 xdotool
 xf86-input-libinput
-xf86-video-dummy
+xf86-video-nouveau
 xfce4-dev-tools
 xfce4-panel
 xfce4-power-manager
@@ -1429,11 +1427,11 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xorgproto
-xpra
 xsel
 xsensors
 xterm
