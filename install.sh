@@ -11,7 +11,6 @@ cd ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 zsh ./installer.sh ~/.cache/dein
 
-
 ## install zinit for zsh
  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
@@ -41,7 +40,6 @@ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 rbenv --version
-exec $SHELL -l
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 rbenv install 2.7.2
 rbenv global 2.7.2
@@ -51,5 +49,5 @@ chsh -s /bin/zsh
 exec zsh
 
 ## some plugins for nvim CocInstall
-nvim -c "source ~/.bin/cocplugins"
+`nvim -c "source ~/.bin/cocplugins"`
 
