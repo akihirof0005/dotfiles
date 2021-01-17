@@ -27,12 +27,6 @@
         //"all-outputs": true,
         "format": "{name}: {icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
             "7": "",
             "urgent": "",
             "focused": "",
@@ -61,7 +55,7 @@
     },
     "custom/tv": {
         "format": "tv",
-        "on-click": "mpv ~/tv.m3u8"
+        "on-click": "mpv /tmp/tv.m3u"
     },
     "idle_inhibitor": {
         "format": "{icon}",

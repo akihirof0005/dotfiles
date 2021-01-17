@@ -156,7 +156,7 @@ output DVI-D-1 res 1920x1080 pos 0 0
 output VGA-1 res 1920x1080 pos 0 1080
 output HDMI-A-1 transform 270 res 1680x1050 pos 1920 420
 
-exec --no-startup-id fcitx-autostart &
+exec --no-startup-id WINIT_UNIX_BACKEND=x11  fcitx -rd &
 exec --no-startup-id volnoti &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id skypeforlinux &
@@ -165,7 +165,18 @@ exec --no-startup-id slack -su &
 exec --no-startup-id killall  nm-applet ; nm-applet 2>&1 > /dev/null &
 exec --no-startup-id WINIT_UNIX_BACKEND=x11 mailspring -b &
 exec --no-startup-id redshift-gtk &
-exec --no-startup-id libinput-gestures-setup start &
+exec --no-startup-id WINIT_UNIX_BACKEND=x11 libinput-gestures-setup start &
 exec --no-startup-id killall dunst; dunst &
+exec --no-startup-id ~/.bin/tv-list &
 
 default_border none
+
+input type:touchpad {
+    pointer_accel 0.7
+    tap enable
+    natural_scroll enable
+}
+
+input type:keyboard {
+    xkb_options ctrl:nocaps
+}
