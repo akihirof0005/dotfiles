@@ -9,8 +9,15 @@
         "sway/window"
     ],
     "modules-right": [
-        "idle_inhibitor",
-        "custom/tv",
+        "custom/NHK",
+        "custom/Ｅテレ",
+        "custom/日テレ",
+        "custom/テレ朝",
+        "custom/ＴＢＳ",
+        "custom/テレ東",
+        "custom/フジ",
+        "custom/MX1",
+        "custom/MX2",
         "tray",
         "backlight",
         "pulseaudio",
@@ -53,16 +60,45 @@
         "escape": true,
         "exec": "~/.config/waybar/mediaplayer.py 2>/dev/null"
     },
-    "custom/tv": {
-        "format": "tv",
-        "on-click": "mpv /tmp/tv.m3u"
+    "custom/MX2": {
+        "format": " MX2",
+        "on-click": "tv ＭＸ２"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+    "custom/MX1": {
+        "format": " MX1",
+        "on-click": "tv ＭＸ１"
+    },
+    "custom/日テレ": {
+        "format": " 日テレ",
+        "on-click": "tv 日テレ"
+    },
+    "custom/フジ": {
+        "format": " フジ",
+        "on-click": "tv フジテレビ"
+    },
+    "custom/テレ東": {
+        "format": " テレ東",
+        "on-click": "tv テレビ東"
+    },
+    "custom/TBS": {
+        "format": " TBS",
+        "on-click": "tv TBS"
+    },
+    "custom/テレ朝": {
+        "format": " テレ朝",
+        "on-click": "tv テレビ朝"
+    },
+    "custom/Ｅテレ": {
+        "format": " Ｅテレ",
+        "on-click": "tv Ｅテレ"
+    },
+    "custom/NHK": {
+        "format": " NHK",
+        "on-click": "tv ＮＨＫ総合"
+    },
+    "custom/日テレ": {
+        "format": " 日テレ",
+        "on-click": "tv 日テレ"
     },
     "tray": {
         "spacing": 5
