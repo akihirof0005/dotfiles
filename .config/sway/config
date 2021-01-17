@@ -146,16 +146,11 @@ bar {
 #   status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 }
 
-include /etc/sway/config.d/*
-input * {
-    xkb_layout "jp,us"
-}
-input <identifier> xkb_model "pc104"
-
 output DVI-D-1 res 1920x1080 pos 0 0
 output VGA-1 res 1920x1080 pos 0 1080
 output HDMI-A-1 transform 270 res 1680x1050 pos 1920 420
 
+exec --no-startup-id tv-list &
 exec --no-startup-id WINIT_UNIX_BACKEND=x11  fcitx -rd &
 exec --no-startup-id volnoti &
 exec --no-startup-id thunar --daemon &
@@ -179,4 +174,6 @@ input type:touchpad {
 
 input type:keyboard {
     xkb_options ctrl:nocaps
+    xkb_layout "jp"
+    xkb_model "pc104"
 }
