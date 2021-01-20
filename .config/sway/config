@@ -23,7 +23,7 @@ set $menu WINIT_UNIX_BACKEND=x11 rofi -show run
 
     bindsym $mod+w exec WINIT_UNIX_BACKEND=x11 firefox
     bindsym $mod+f exec WINIT_UNIX_BACKEND=x11 thunar
-    bindsym $mod+m exec /usr/share/mailspring/mailspring
+    bindsym $mod+m exec WINIT_UNIX_BACKEND=x11 /home/skit/dotfiles/.bin/gmail-desktop-2.20.4-linux.AppImage
     bindsym $mod+b exec xfce4-screenshooter
     bindsym $mod+s exec slack
     bindsym $mod+i exec google-chrome-stable --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html
@@ -151,7 +151,7 @@ output VGA-1 res 1920x1080 pos 0 1080
 output HDMI-A-1 transform 270 res 1680x1050 pos 1920 420
 
 exec --no-startup-id tv-list &
-exec --no-startup-id WINIT_UNIX_BACKEND=x11  fcitx -rd &
+exec --no-startup-id fcitx-autostart &
 exec --no-startup-id volnoti &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id skypeforlinux &
@@ -177,3 +177,17 @@ input type:keyboard {
     xkb_layout "jp"
     xkb_model "pc104"
 }
+
+
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86Search exec bemenu-run
+
