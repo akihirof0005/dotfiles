@@ -34,7 +34,6 @@
         //"all-outputs": true,
         "format": "{name}: {icon}",
         "format-icons": {
-            "7": "",
             "urgent": "",
             "focused": "",
             "default": ""
