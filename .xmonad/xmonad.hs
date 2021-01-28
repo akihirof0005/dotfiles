@@ -116,7 +116,7 @@ main = do
     , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
     ]
 
-myLayout = withIM (1/5) (ClassName "Thunar") (spacing 3 $  emptyBSP  )
+myLayout = withIM (1/5) (ClassName "Pragli") (spacing 3 $  emptyBSP  )
       |||  noBorders Full
 
 myStartupHook = do

@@ -151,3 +151,16 @@ let g:ale_fixers = {
 \}
 let g:ale_rustfmt_executable = 'rustfmt'
 '''
+
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+set rtp+=~/.vim/pack/XXX/start/LanguageClient-neovim
+let g:LanguageClient_serverCommands = { 'haskell': ['haskell-language-server-wrapper', '--lsp'] }
+let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+'''
+
+
