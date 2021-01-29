@@ -22,7 +22,6 @@
 .config/VirtualBox/*
 .config/archey3.cfg
 .config/.config/*
-.xmonad/.xmonad/*
 .config/coc/*
 .config/dconf
 .config/systemd/user/default.target.wants
