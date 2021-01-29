@@ -32,6 +32,23 @@
 .config/zoomus.con
 .config/zoomus.conf
 
+
+
+
+
+.bin/.bin
+.bin/Pragli.AppImage
+.bin/gmail-desktop-2.20.4-linux.AppImage
+.config/Code - OSS/
+.config/Gmail\ Desktop/
+.config/Pragli/
+.config/discord/
+.config/gtk-3.0/bookmarks
+.config/mozc/
+.xmonad/--recompile
+.xmonad/.stack-work/
+.xmonad/stack.yaml.lock
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
