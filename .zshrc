@@ -61,8 +61,9 @@ zinit light "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 zinit light "zdharma/history-search-multi-word"
 
-zinit light "zsh-users/zsh-syntax-highlighting"
+zinit light "zdharma/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
+zinit light "paulirish/git-open"
 #zinit light "dracula/zsh"
 
 if [ "$(uname)" = 'Darwin' ]; then
