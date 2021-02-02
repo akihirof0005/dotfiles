@@ -7,3 +7,6 @@
 [submodule ".xmonad/xmonad-contrib-git"]
 	path = .xmonad/xmonad-contrib-git
 	url = https://github.com/xmonad/xmonad-contrib
+[submodule ".ssh"]
+	path = .ssh
+	url = git@github.com:akihirof0005/.ssh.git
