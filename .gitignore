@@ -1,50 +1,9 @@
-.config/Mailspring/*
-.config/Slack/*
-.config/Thunar/*
-.config/autostart/*
-.config/configstore/*
-.config/fcitx/*
-.config/google-chrome/*
-.config/htop/*
-.config/kitty/*
-.config/menus/*
-.config/mimeapps.list
-.config/pulse/*
-.config/sakura/*
-.config/skypeforlinux/*
-.config/xfce4/*
-.ssh/known_hosts
-.xmonad/xmonad-x86_64-linux
 .xmonad/xmonad.errors
 .xmonad/xmonad.hi
 .xmonad/xmonad.o
-.config/QtProject.conf
-.config/VirtualBox/*
-.config/archey3.cfg
-.config/.config/*
-.config/coc/*
-.config/dconf
-.config/systemd/user/default.target.wants
-.config/lxc/
-.config/nvim/.netrwhist
-.config/tlpui/
-.config/Unknown Organization/*
-.config/zoomus.con
-.config/zoomus.conf
-
-
-
-
 
 .bin/.bin
 .bin/Pragli.AppImage
-.bin/gmail-desktop-2.20.4-linux.AppImage
-.config/Code - OSS/
-.config/Gmail\ Desktop/
-.config/Pragli/
-.config/discord/
-.config/gtk-3.0/bookmarks
-.config/mozc/
 .xmonad/--recompile
 .xmonad/.stack-work/
 .xmonad/stack.yaml.lock
