@@ -49,6 +49,8 @@
 .xmonad/.stack-work/
 .xmonad/stack.yaml.lock
 
+.ssh
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
