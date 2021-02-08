@@ -96,6 +96,7 @@ clang
 clucene
 cmake
 code
+coin
 colord
 compface
 compiler-rt
@@ -128,6 +129,7 @@ dialog
 diffutils
 discord
 djvulibre
+dkms
 dmapi
 dmenu
 dmidecode
@@ -190,7 +192,9 @@ fmt
 folks
 fontconfig
 fontforge
+freecad
 freeglut
+freeimage
 freerdp
 freetype2
 fribidi
@@ -217,6 +221,8 @@ gettext
 ghostscript
 giflib
 git
+gl2ps
+glew
 glib-networking
 glib-perl
 glib2
@@ -291,6 +297,7 @@ gvfs
 gzip
 harfbuzz
 harfbuzz-icu
+hdf5
 hdparm
 help2man
 hicolor-icon-theme
@@ -332,6 +339,7 @@ js78
 json-c
 json-glib
 jsoncpp
+jxrlib
 karchive
 kauth
 kbd
@@ -468,6 +476,7 @@ lib32-xz
 lib32-zlib
 lib32-zstd
 libabw
+libaec
 libaio
 libao
 libappindicator-gtk3
@@ -637,6 +646,7 @@ libpwquality
 libqtxdg
 libqxp
 libraqm
+libraw
 libraw1394
 libreoffice-still
 libreoffice-still-ja
@@ -660,6 +670,7 @@ libsoxr
 libspectre
 libspeechd
 libspiro
+libspnav
 libsrtp
 libssh
 libssh2
@@ -797,6 +808,7 @@ mbedtls
 mcomix
 md4c
 mdadm
+med
 media-player-info
 memtester
 mesa
@@ -821,6 +833,7 @@ ndctl
 neon
 neovim
 net-snmp
+netcdf
 netcf
 netpbm
 nettle
@@ -846,6 +859,7 @@ obs-studio
 ocl-icd
 oniguruma
 openal
+opencascade
 opencl-headers
 opencl-mesa
 opencore-amr
@@ -956,6 +970,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pyalpm
 pyside2
+pyside2-tools
 python
 python-anytree
 python-appdirs
@@ -971,6 +986,8 @@ python-cffi
 python-chardet
 python-click
 python-cryptography
+python-cycler
+python-dateutil
 python-dbus
 python-dbus-common
 python-distro
@@ -989,20 +1006,24 @@ python-importlib-metadata
 python-isodate
 python-jinja
 python-jsonschema
+python-kiwisolver
 python-lxml
 python-lz4
 python-mako
 python-markdown
 python-markupsafe
+python-matplotlib
 python-more-itertools
 python-msgpack
 python-mutagen
 python-netifaces
+python-numpy
 python-opengl
 python-ordered-set
 python-packaging
 python-paramiko
 python-pillow
+python-pivy
 python-ply
 python-powerline
 python-psutil
@@ -1070,18 +1091,21 @@ python2-virtualenv
 python2-wheel
 python2-zipp
 qemu
+qhull
 qpdf
 qt5-base
 qt5-declarative
 qt5-location
 qt5-multimedia
 qt5-quickcontrols
+qt5-sensors
 qt5-speech
 qt5-svg
 qt5-tools
 qt5-wayland
 qt5-webchannel
 qt5-webengine
+qt5-webkit
 qt5-x11extras
 radeontool
 raft
@@ -1144,6 +1168,7 @@ snappy
 sndio
 solid
 sonnet
+soqt
 sord
 sound-theme-freedesktop
 soundtouch
@@ -1178,6 +1203,7 @@ t1lib
 taglib
 talloc
 tar
+tbb
 tcl
 tdb
 telepathy-glib
@@ -1202,6 +1228,7 @@ thin-provisioning-tools
 thunar
 thunar-volman
 tidy
+tk
 tlp
 tlp-rdw
 tp_smapi
@@ -1242,6 +1269,7 @@ vmaf
 volume_key
 vte-common
 vte3
+vtk
 vulkan-icd-loader
 vulkan-radeon
 w3m
@@ -1283,6 +1311,7 @@ xclip
 xdg-dbus-proxy
 xdg-utils
 xdotool
+xerces-c
 xf86-input-libinput
 xf86-video-nouveau
 xfce4-dev-tools

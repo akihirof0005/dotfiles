@@ -505,7 +505,7 @@ selection:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
-#key_bindings:
+key_bindings:
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
@@ -515,6 +515,8 @@ selection:
   #- { key: Add,      mods: Control,       action: IncreaseFontSize }
   #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+   - { key: V, mods: Control, action: Paste }
+   - { key: C, mods: Control, action: Copy  }
 
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
@@ -563,3 +565,4 @@ selection:
 
   # Print all received window events.
   #print_events: false
+  #
