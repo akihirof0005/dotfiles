@@ -1,5 +1,38 @@
 #!/usr/bin/zsh
 
+if [ "$(uname)" == 'Darwin' ]; then
+  echo "update system packages"
+  softwareupdate --install --all
+  echo "update brew packages"
+  brew update
+  brew upgrade
+  echo "update brew cask packages"
+  brew cask upgrade
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+  if [ -e /etc/arch-release ]; then
+     yay -Syu; paccache -r; paccache -ruk0
+     sudo grub-mkconfig -o /boot/grub/grub.cfg
+     pacman -Qmq > ~/dotfiles/pkgname/yay.list
+     pacman -Qnq > ~/dotfiles/pkgname/pacman.list
+  elif [ -e /etc/lsb-release ]; then
+     sudo apt update
+     sudo apt upgrade
+     sudo apt autoremove
+     sudo apt install neovim zsh
+     sudo apt install zip unzip autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev
+  elif [ -e /etc/debian_version ]; then
+     sudo apt update
+     sudo apt upgrade
+     sudo apt autoremove
+
+  elif [ "$(expr substr $(uname -m) 1 7)" == 'aarch64' ]; then
+     pkg update
+     pkg upgrade
+     pkg install neovim openssh zsh   rust
+     termux-setup-storage
+  fi
+fi
+
 # update Systems
 bash bin/update
 
@@ -12,7 +45,7 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 zsh ./installer.sh ~/.cache/dein
 
 ## install zinit for zsh
- sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 ## install Rust for *nix
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -20,11 +53,11 @@ rustup component add rls rust-analysis rust-src
 rustup component add rustfmt
 
 ## install sdk system 
- curl -s "https://get.sdkman.io" | bash
- source ~/.sdkman/bin/sdkman-init.sh
- sdk install java 14.0.2.j9-adpt
- sdk install gradle
- sdk install kotlin
+curl -s "https://get.sdkman.io" | bash
+source ~/.sdkman/bin/sdkman-init.sh
+sdk install java 14.0.2.j9-adpt
+sdk install gradle
+sdk install kotlin
 
 ## install nodejs
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
