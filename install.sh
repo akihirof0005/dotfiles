@@ -19,7 +19,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
      sudo apt upgrade
      sudo apt autoremove
      sudo apt install neovim zsh
-     sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev
+     sudo apt install zip unzip autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev
   elif [ -e /etc/debian_version ]; then
      sudo apt update
      sudo apt upgrade
