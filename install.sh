@@ -1,5 +1,6 @@
 #!/usr/bin/zsh
 
+
 if [ "$(uname)" == 'Darwin' ]; then
   echo "update system packages"
   softwareupdate --install --all
