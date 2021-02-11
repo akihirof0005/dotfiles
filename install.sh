@@ -6,9 +6,15 @@ git pull
 $HOME/dotfiles/install/systems.sh
 
 # update Systems
+$HOME/dotfiles/update/systems.sh
 bash bin/update
 
-# Install plugins
+# Install some Languages
+$HOME/install/ruby.sh
+$HOME/install/rust.sh
+$HOME/install/jvmLan.sh
+$HOME/install/nodejs.sh
+$HOME/install/haskell.sh
 
 ## install dein for nvim
 mkdir -p ~/.cache/dein
@@ -19,21 +25,10 @@ zsh ./installer.sh ~/.cache/dein
 ## install zinit for zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
-## install Rust for *nix
-$HOME/dotfiles/install/rust.sh
-
-## install sdk system
-$HOME/dotfiles/install/jvmLan.sh
-
-## install nodejs
-$HOME/dotfiles/install/nodejs.sh
-
-## install Ruby
-$HOME/dotfiles/install/ruby.sh
+## some plugins for nvim CocInstall
+`nvim -c "source ~/.bin/cocplugins"`
 
 ##swich to zsh
 chsh -s /bin/zsh
 exec zsh
 
-## some plugins for nvim CocInstall
-`nvim -c "source ~/.bin/cocplugins"`
