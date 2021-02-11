@@ -1,6 +1,4 @@
 #!/bin/bash
-cd $HOME/dotfiles/
-git pull
 
 if [ "$(uname)" == 'Darwin' ]; then
   echo "update system packages"
