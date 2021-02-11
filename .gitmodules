@@ -10,3 +10,6 @@
 [submodule ".ssh"]
 	path = .ssh
 	url = git@github.com:akihirof0005/.ssh.git
+[submodule ".bin"]
+	path = .bin
+	url = git@github.com:akihirof0005/.bin.git
