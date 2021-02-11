@@ -6,4 +6,6 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 rbenv install 2.7.2
 rbenv global 2.7.2
 
+gem install solargraph
+
 cd ~/dotfiles
