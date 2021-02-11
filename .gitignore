@@ -2,36 +2,36 @@
 .xmonad/xmonad.hi
 .xmonad/xmonad.o
 .xmonad/xmonad-x86_64-linux
-.bin/.bin
-.bin/Pragli.AppImage
+.bin
+.ssh
 .xmonad/--recompile
 .xmonad/.stack-work/
 .xmonad/stack.yaml.lock
 
-	.bin/gmail-desktop-2.20.4-linux.AppImage
-	.config/Code - OSS/
-	.config/Gmail Desktop/
-	.config/Pragli/
-	.config/Slack/
-	.config/Thunar/
-	.config/autostart/
-	.config/cef_user_data/
-	.config/coc/
-	.config/configstore/
-	.config/dconf/
-	.config/discord/
-	.config/fcitx/
-	.config/google-chrome/
-	.config/gtk-3.0/bookmarks
-	.config/menus/
-	.config/mimeapps.list
-	.config/mozc/
-	.config/nvim/.netrwhist
-	.config/pavucontrol.ini
-	.config/pulse/
-	.config/skypeforlinux/
-	.config/xfce4/
-	.xmonad/xmonad-x86_64-linux
+.bin/gmail-desktop-2.20.4-linux.AppImage
+.config/Code - OSS/
+.config/Gmail Desktop/
+.config/Pragli/
+.config/Slack/
+.config/Thunar/
+.config/autostart/
+.config/cef_user_data/
+.config/coc/
+.config/configstore/
+.config/dconf/
+.config/discord/
+.config/fcitx/
+.config/google-chrome/
+.config/gtk-3.0/bookmarks
+.config/menus/
+.config/mimeapps.list
+.config/mozc/
+.config/nvim/.netrwhist
+.config/pavucontrol.ini
+.config/pulse/
+.config/skypeforlinux/
+.config/xfce4/
+.xmonad/xmonad-x86_64-linux
 
 # Ignore Gradle project-specific cache directory
 .gradle
