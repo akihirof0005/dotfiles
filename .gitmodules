@@ -9,7 +9,9 @@
 	url = https://github.com/xmonad/xmonad-contrib
 [submodule ".ssh"]
 	path = .ssh
-	url = git@github.com:akihirof0005/.ssh.git
+  url = git@github.com:akihirof0005/.ssh.git
+  ignore = dirty
 [submodule ".bin"]
 	path = .bin
-	url = git@github.com:akihirof0005/.bin.git
+  url = git@github.com:akihirof0005/.bin.git
+  ignore = dirty
