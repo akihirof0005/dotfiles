@@ -7,7 +7,7 @@ $HOME/dotfiles/install/systems.sh
 
 # update Systems
 $HOME/dotfiles/update/systems.sh
-bash bin/update
+bash .bin/update
 
 # Install some Languages
 $HOME/install/ruby.sh
@@ -21,12 +21,13 @@ mkdir -p ~/.cache/dein
 cd ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 zsh ./installer.sh ~/.cache/dein
+cd ~/dotfiles
 
 ## install zinit for zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 ## some plugins for nvim CocInstall
-`nvim -c "source ~/.bin/cocplugins"`
+nvim -c "source ~/.bin/cocplugins"
 
 ##swich to zsh
 chsh -s /bin/zsh
