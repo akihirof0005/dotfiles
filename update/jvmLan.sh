@@ -1,1 +1,3 @@
- sdk selfupdate
+#!/bin/zsh
+source .zshrc
+sdk selfupdate
