@@ -88,3 +88,6 @@ source $HOME/dotfiles/theme.zsh
 
 setopt prompt_cr
 setopt prompt_sp
+
+##alias
+alias update='zsh $HOME/dotfiles/update.sh'
