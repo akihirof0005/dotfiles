@@ -7,6 +7,7 @@ do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".config" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
+    [[ "$f" == ".xmonad" ]] && continue
     ln -s "$SCRIPT_DIR/$f" "$HOME/$f"
     echo "$f"
 done
@@ -17,5 +18,13 @@ cd ~/dotfiles/.config
 for f in *
 do
     ln -s "$SCRIPT_DIR/.config/$f" "$HOME/.config/$f"
+    echo "$f"
+done
+
+mkdir ~/.xmonad
+cd ~/dotfiles/.xmonad
+for f in *
+do
+    ln -s "$SCRIPT_DIR/.xmonad/$f" "$HOME/.xmonad/$f"
     echo "$f"
 done
