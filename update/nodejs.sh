@@ -3,4 +3,5 @@
 cd $HOME/.nvm
 git pull
 source $HOME/.nvm/nvm.sh
-nvm install-latest-npm
+nvm install --lts
+nvm use --lts
