@@ -23,12 +23,12 @@ set $menu WINIT_UNIX_BACKEND=x11 rofi -show run
 
     bindsym $mod+w exec WINIT_UNIX_BACKEND=x11 firefox
     bindsym $mod+f exec WINIT_UNIX_BACKEND=x11 thunar
-    bindsym $mod+m exec WINIT_UNIX_BACKEND=x11 /home/skit/dotfiles/.bin/gmail-desktop-2.20.4-linux.AppImage
+    bindsym $mod+m exec WINIT_UNIX_BACKEND=x11 "$HOME/dotfiles/.bin/gmail-desktop-2.20.4-linux.AppImage"
     bindsym $mod+b exec xfce4-screenshooter
     bindsym $mod+s exec slack
     bindsym $mod+i exec google-chrome-stable --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html
     bindsym $mod+t exec tv
-    bindsym $mod+z exec /home/skit/dotfiles/.bin/jd
+    bindsym $mod+z exec jd
     bindsym $mod+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5% && volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
     bindsym $mod+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5% && volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
     bindsym $mod+Right exec pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
@@ -155,7 +155,7 @@ exec --no-startup-id fcitx-autostart &
 exec --no-startup-id volnoti &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id skypeforlinux &
-exec --no-startup-id skypeforlinux --secondary --datapath="/home/skit/.config/skypeforlinux/data2" &
+exec --no-startup-id skypeforlinux --secondary --datapath="~/.config/skypeforlinux/data2" &
 exec --no-startup-id slack -su &
 exec --no-startup-id killall  nm-applet ; nm-applet 2>&1 > /dev/null &
 exec --no-startup-id WINIT_UNIX_BACKEND=x11 mailspring -b &
