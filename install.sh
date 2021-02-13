@@ -15,6 +15,8 @@ $HOME/dotfiles/install/dein.sh
 $HOME/dotfiles/install/zinit.sh
 ## some plugins for nvim CocInstall
 $HOME/dotfiles/install/cocplugin.sh
+## init install for nvim enviroment
+alacritty -e nvim &
 ##swich to zsh
 chsh -s /bin/zsh
 exec zsh
