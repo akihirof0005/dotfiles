@@ -8,7 +8,6 @@ set fileencodings=utf-8,euc-jp,cp932
 set fileformats=unix,dos,mac
 set ambiwidth=double
 
-
 " View
 set number
 set cursorline
@@ -35,7 +34,6 @@ if dein#load_state('~/.cache/dein')
 endif
 if dein#check_install()
   call dein#install()
-  source ~/.bin/cocplugins
 endif
 
 syntax enable
