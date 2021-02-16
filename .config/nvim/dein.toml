@@ -48,29 +48,21 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'vim-scripts/groovyindent-unix'
 on_ft = ['groovy']
 
-# When the plugin is correctly loaded, there will be a nice statusline at the bottom of each vim window.
-# https://github.com/vim-airline/vim-airline
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-hook_add = '''
-let g:airline_powerline_fonts = 1
-'''
-depends = ['vim-airline-themes']
-
-#https://github.com/vim-airline/vim-airline-themes
-#[[plugins]]
-#repo = 'vim-airline/vim-airline-themes'
-#hook_add = '''
-#'''
-
-[[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'ghifarit53/tokyonight-vim'
 hook_add = '''
   set termguicolors
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  syntax enable
-  colorscheme tender
-  let g:airline_theme = 'tender'
+  let g:tokyonight_style = 'night' " available: night, storm
+  let g:tokyonight_enable_italic = 1
+  colorscheme tokyonight
+'''
+
+# When the plugin is correctly loaded, there will be a nice statusline at the bottom of each vim window.
+# https://github.com/itchyny/lightline.vim
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {'colorscheme' : 'tokyonight'}
 '''
 
 #ファイルの形式を文脈で判断するプラグイン
@@ -136,10 +128,6 @@ rev = 'release'
 
 # toml lsp client
 # https://www.npmjs.com/package/coc-toml
-[[plugins]]
-repo    = 'kkiyama117/coc-toml'
-depends = 'coc.nvim'
-on_ft   = 'toml'
 
 
 [[plugins]]
