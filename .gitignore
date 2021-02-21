@@ -1,6 +1,7 @@
 .bin
 .ssh
 
+<<<<<<< HEAD
 .config/Gmail\ Desktop/*
 .config/coc/
 .config/configstore/
