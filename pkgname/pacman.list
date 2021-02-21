@@ -210,6 +210,7 @@ gnome-online-accounts
 gnome-themes-extra
 gnu-free-fonts
 gnupg
+gnustep-base
 gnutls
 go
 go-md2man
@@ -975,8 +976,8 @@ twolame
 tzdata
 uchardet
 udisks2
+unarchiver
 unibilium
-unzip
 upower
 urxvt-perls
 usbmuxd
