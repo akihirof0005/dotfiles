@@ -1,0 +1,9 @@
+-- vim: ft=haskell
+Config {
+    font     =  "xft:apricotJapanesefontT:size=12:antialias=true"
+--    font     =  "xft:IPAPGothic:size=14:antialias=true"
+  , bgColor  =  "#55504E"
+  , fgColor  =  "#FFFFFF"
+  , position =  Static { xpos = 0, ypos = 0, width = 1670, height = 25 },
+  --, position =  TopSize C 100 33
+}

@@ -1,7 +1,7 @@
 decorations none
 transparent false
 dockapp_mode none
-geometry 10x1-1900+0
+geometry 10x1-0+0
 background "#55504E"
 kludges force_icons_size
 grow_gravity NW
@@ -13,4 +13,4 @@ window_type dock
 window_layer bottom
 no_shrink false
 skip_taskbar true
- 
+

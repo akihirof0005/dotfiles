@@ -75,11 +75,13 @@ strippedKeys x = foldr M.delete (keys defaultConfig x) (keysToRemove x)
 
 main :: IO ()
 
-main = do
-  wsbar <- spawnPipe myWsBar
+main = xmonad =<< xmobar defaults
+  --wsbar <- spawnPipe myWsBar
 --  xmonad $  docks $ ewmh kdeConfig
-  xmonad $  docks $ ewmh def
+  -- xmonad $  docks $ ewmh def
+  -- xmonad =<< xmobar def
   --xmonad $  docks $ def
+defaults = defaultConfig 
     { borderWidth = 1
     , terminal = "alacritty"
     , normalBorderColor = colorGray
@@ -87,7 +89,7 @@ main = do
     , startupHook = myStartupHook
     , manageHook = placeHook myPlacement <+> myManageHookShift <+> myManageHookFloat <+> manageDocks
     , layoutHook = toggleLayouts (noBorders Full) $ avoidStruts $ myLayout
-    , logHook = myLogHook wsbar
+   -- , logHook = myLogHook wsbar
     , handleEventHook = fadeWindowsEventHook
     , workspaces = myWorkspaces
     , modMask = modm
@@ -127,9 +129,9 @@ myManageHookShift = composeAll
 myManageHookFloat = composeAll
   [ ]
 
-myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
+--myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
 
-myWsBar = "xmobar ~/.xmonad/xmobarrc"
+--myWsBar = "xmobar ~/.xmonad/xmobarrc"
 
 wsPP = xmobarPP { ppOrder = \(ws:l:t:_)   -> [ws,t]
       , ppCurrent = xmobarColor colorGreen colorNormalbg
