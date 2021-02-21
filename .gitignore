@@ -10,3 +10,6 @@
 .xmonad/xmonad.errors
 .xmonad/xmonad.hi
 .xmonad/xmonad.o
+
+pkgname/pacman.list
+pkgname/yay.list
