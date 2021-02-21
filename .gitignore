@@ -1,2 +1,12 @@
 .bin
 .ssh
+
+.config/Gmail\ Desktop/*
+.config/coc/
+.config/configstore/
+.xmonad/.stack-work/
+.xmonad/stack.yaml.lock
+.xmonad/xmonad-x86_64-linux
+.xmonad/xmonad.errors
+.xmonad/xmonad.hi
+.xmonad/xmonad.o

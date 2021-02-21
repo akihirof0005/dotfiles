@@ -96,40 +96,6 @@ nmap gg=G :rustfmt
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 
-#[[plugins]]
-#repo = 'ruby-formatter/rufo-vim'
-#hook_add = '''
-#let g:rufo_auto_formatting = 1
-#'''
-#[[plugins]]
-#repo = 'neoclide/coc-css'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-html'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-python'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-yaml'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-json'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-vimtex'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-java'
-#depends = 'coc.nvim'
-#[[plugins]]
-#repo = 'neoclide/coc-rls'
-#depends = 'coc.nvim'
-
-# toml lsp client
-# https://www.npmjs.com/package/coc-toml
-
-
 [[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
@@ -140,7 +106,6 @@ let g:ale_fixers = {
 let g:ale_rustfmt_executable = 'rustfmt'
 '''
 
-
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
@@ -150,5 +115,3 @@ set rtp+=~/.vim/pack/XXX/start/LanguageClient-neovim
 let g:LanguageClient_serverCommands = { 'haskell': ['haskell-language-server-wrapper', '--lsp'] }
 let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
 '''
-
-
