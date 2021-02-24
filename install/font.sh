@@ -13,3 +13,5 @@ mv "./あんずもじ始等幅/APJapanesefontHT.ttf" $HOME/.local/share/fonts/
 mv ./RictyDiminished-for-Powerline-master/vim-powerline-fontpatched/* $HOME/.local/share/fonts/
 
 rm -r "./あんずもじ等幅2020" "./あんずもじ始等幅" ap8.zip ap6.zip master.zip RictyDiminished-for-Powerline-master
+
+ fc-cache -vf

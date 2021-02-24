@@ -1,7 +1,6 @@
-import qualified Data.Map as M
-
 import XMonad
 --import XMonad.Config.Kde
+import qualified Data.Map.Strict
 import qualified XMonad.StackSet as W  -- myManageHookShift
 
 import XMonad.Actions.CopyWindow
@@ -13,7 +12,6 @@ import XMonad.Actions.WindowGo (doShift)
 import XMonad.Actions.CycleWS
 
 import XMonad.Hooks.DynamicLog         -- for xmobar
-import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.FadeWindows
 import XMonad.Hooks.ManageDocks        -- avoid xmobar area
 import XMonad.Hooks.Place
@@ -71,7 +69,7 @@ keysToRemove x =
     , (modm .|. shiftMask, xK_Return)
   ]
 
-strippedKeys x = foldr M.delete (keys defaultConfig x) (keysToRemove x)
+strippedKeys x = foldr Data.Map.Strict.delete (keys defaultConfig x) (keysToRemove x)
 
 main :: IO ()
 
@@ -118,7 +116,8 @@ defaults = defaultConfig
     ]
 
 myLayout = withIM (1/5) (ClassName "Pragli") (spacing 3 $  emptyBSP  )
-      |||  noBorders Full
+      ||| noBorders Full
+      ||| OneBig (3/4) (3/4)
 
 myStartupHook = do
   spawn "bash ~/dotfiles/.bin/autostart > /tmp/start.log &"
