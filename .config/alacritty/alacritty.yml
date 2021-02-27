@@ -1,5 +1,5 @@
 font:
-  size: 16
+  size: 12
   normal:
     family: Ricty Diminished Discord for Powerline
 
@@ -37,3 +37,5 @@ colors:
 
 selection:
   save_to_clipboard: true
+key_bindings:
+- { key: V, mods: Control, action: Paste }

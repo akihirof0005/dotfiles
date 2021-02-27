@@ -7,6 +7,9 @@ packages:
 
 extra-deps:
 flags:
+  xmobar:
+    with_xft: true
+    with_datezone: true
 extra-package-dbs: []
 
 ghc-options:
