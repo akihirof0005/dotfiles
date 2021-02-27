@@ -1,6 +1,6 @@
 -- vim: ft=haskell
 Config {
-    font     =  "xft:Ricty Diminished Discord for Powerline:size=12:antialias=true"
+    font     =  "xft:apricotJapanesefontT:size=12:antialias=true"
     --font = "xft:IPAPGothic:size=14:antialias=true"
   , bgColor  =  "#55504E"
   , fgColor  =  "#FFFFFF"
