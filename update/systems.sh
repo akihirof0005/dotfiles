@@ -8,8 +8,6 @@ if [ "$(uname)" == 'Darwin' ]; then
   echo "update brew packages"
   brew update
   brew upgrade
-  echo "update brew cask packages"
-  brew cask upgrade
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   if [ -e /etc/arch-release ]; then
     yay -Syu;

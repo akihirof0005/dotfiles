@@ -1,1 +1,1 @@
-alacritty -e nvim -c "CocUpdate" &
+ nvim -c "CocUpdate" 

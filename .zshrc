@@ -66,14 +66,10 @@ zinit light "zsh-users/zsh-completions"
 zinit light "paulirish/git-open"
 #zinit light "dracula/zsh"
 
-if [ "$(uname)" = 'Darwin' ]; then
-  export JAVA_HOME=`/usr/libexec/java_home -v "1.8"` &&  export PATH=${JAVA_HOME}/bin:${PATH}
-elif [ "$(expr substr $(uname -s) 1 5)" = 'Linux' ]; then
   eval "$(rbenv init -)"
   #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
   export SDKMAN_DIR=$HOME"/.sdkman"
   [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
-fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -91,3 +87,14 @@ setopt prompt_sp
 
 ##alias
 alias update='zsh $HOME/dotfiles/update.sh'
+
+#m1mac
+if [ "$(uname -m)" == 'arm64' ]; then
+  typeset -U path PATH
+  path=(
+	   /opt/homebrew/bin(N-/)
+	   /usr/local/bin(N-/)
+     /opt/QEMU/bin(N-/)
+	   $path
+  )
+fi

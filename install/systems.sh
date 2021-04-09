@@ -1,10 +1,14 @@
 #!/bin/bash
 
 if [ "$(uname)" == 'Darwin' ]; then
-  echo "update system packages"
-  softwareupdate --install --all
-  echo "install brew package manager"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    echo "update system packages"
+    softwareupdate --install --all
+    echo "install brew package manager"
+  if [ "$(uname -m)" == 'arm64' ]; then
+    arch -arm64e /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  else
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  fi
   brew install neovim zip unzip git
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   if [ -e /etc/arch-release ]; then
