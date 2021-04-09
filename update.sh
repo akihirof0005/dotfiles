@@ -5,6 +5,7 @@ echo "##################################"
 cd $HOME/dotfiles/
 git pull
 git submodule update --force
+git submodule update --remote --merge 
 cd
 
 # update Systems
