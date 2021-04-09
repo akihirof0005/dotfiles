@@ -6,7 +6,7 @@ if [ "$(uname -m)" == 'arm64' ]; then
 sdk install java 11.0.10-zulu
 fi
 else
-sdk install java 11.0.10.j9-adpt
+sdk install java 11.0.10.9-ms
 fi
 sdk install gradle
 sdk install kotlin
