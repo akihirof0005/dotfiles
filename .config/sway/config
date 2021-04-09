@@ -147,7 +147,7 @@ bar {
 }
 
 output DP-1 res 1920x1080 pos 0 0
-output DP-2 transform 270 res 1680x1050 pos 1920 420
+output DP-2 res 1920x1080 pos 0 1080
 
 exec --no-startup-id tv-list &
 exec --no-startup-id fcitx-autostart &
