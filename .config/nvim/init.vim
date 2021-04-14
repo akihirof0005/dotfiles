@@ -59,3 +59,5 @@ nmap gg=G :call CocAction('format')<CR>
 "for COPY&PASTE install xclip
 set clipboard+=unnamedplus
 set ff=unix
+
+set foldmethod=indent
