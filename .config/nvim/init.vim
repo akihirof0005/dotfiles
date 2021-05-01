@@ -60,4 +60,4 @@ nmap gg=G :call CocAction('format')<CR>
 set clipboard+=unnamedplus
 set ff=unix
 
-set foldmethod=indent
+"set foldmethod=indent
