@@ -86,7 +86,7 @@ setopt prompt_cr
 setopt prompt_sp
 
 ##alias
-alias update='zsh $HOME/dotfiles/update.sh'
+alias update='$HOME/dotfiles/update.sh'
 
 #m1mac
 if [ "$(uname -m)" == 'arm64' ]; then

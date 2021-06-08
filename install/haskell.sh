@@ -1,4 +1,8 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+HASKELL_FLAG=$(cat ~/dotfiles/config.json | jq -r .languages.haskell.enable)
+
+if [ HASKELL_FLAG ]; then
 curl -sSL https://get.haskellstack.org/ | sh
 stack setup
 stack ghc -- --version
@@ -9,3 +13,4 @@ cd haskell-language-server
 stack ./install.hs hls
 
 cd ~/dotfiles
+fi

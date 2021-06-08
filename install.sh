@@ -1,5 +1,8 @@
 #!/usr/bin/zsh
 
+# show system imformation
+$HOME/dotfiles/enviroment.sh
+
 $HOME/dotfiles/install/systems.sh
 # update Systems
 $HOME/dotfiles/update/systems.sh

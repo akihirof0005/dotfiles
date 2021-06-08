@@ -1,5 +1,11 @@
 {
   "languages": {
+    "haskell": {
+      "enable" : true
+    },
+    "rust": {
+      "enable" : true
+    },
     "ruby": {
       "enable": true,
       "version": "3.0.1",

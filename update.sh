@@ -1,4 +1,10 @@
-#!/usr/bin/zsh
+#!/bin/bash
+echo "##################################"
+echo "########SYSTEM IMFORMATION########"
+echo "##################################"
+neofetch
+$HOME/dotfiles/enviroment.sh
+
 echo "##################################"
 echo "##########DOTFILE UPDATE##########"
 echo "##################################"
