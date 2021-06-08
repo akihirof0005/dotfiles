@@ -1,8 +1,8 @@
 #!/bin/bash
 
-JVM_FLAG=$(cat config.json | jq .languages.jvm.enable)
-JVM_VER=$(cat config.json | jq -r .languages.jvm.version)
-JVM_MODULES=$(cat config.json | jq -r .languages.jvm.modules[] | tr '\n' ' ')
+JVM_FLAG=$(cat ~/dotfiles/config.json | jq .languages.jvm.enable)
+JVM_VER=$(cat ~/dotfiles/config.json | jq -r .languages.jvm.version)
+JVM_MODULES=$(cat ~/dotfiles/config.json | jq -r .languages.jvm.modules[] | tr '\n' ' ')
 
 if [ JVM_FLAG ]; then
 

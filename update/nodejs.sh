@@ -1,8 +1,8 @@
 #!/bin/bash
 
-NODE_FLAG=$(cat config.json | jq .languages.nodejs.enable)
-NODE_VER=$(cat config.json | jq -r .languages.nodejs.version)
-NODE_MODULES=$(cat config.json | jq -r .languages.nodejs.modules[] | tr '\n' ' ')
+NODE_FLAG=$(cat ~/dotfiles/config.json | jq .languages.nodejs.enable)
+NODE_VER=$(cat ~/dotfiles/config.json | jq -r .languages.nodejs.version)
+NODE_MODULES=$(cat ~/dotfiles/config.json | jq -r .languages.nodejs.modules[] | tr '\n' ' ')
 
 if [ NODE_FLAG ]; then
   cd $HOME/.nvm
