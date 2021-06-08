@@ -3,6 +3,8 @@
 $HOME/dotfiles/install/systems.sh
 # update Systems
 $HOME/dotfiles/update/systems.sh
+# Install alacritty
+$HOME/dotfiles/install/terminal.sh
 # Install some Languages
 $HOME/dotfiles/install/ruby.sh
 $HOME/dotfiles/install/rust.sh

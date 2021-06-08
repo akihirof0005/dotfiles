@@ -12,6 +12,11 @@ echo "##################################"
 echo "##########SYSTEM  UPDATE##########"
 echo "##################################"
 $HOME/dotfiles/update/systems.sh
+# Install some terminal
+echo "##################################"
+echo "##########TERMINAL UPDATE#########"
+echo "##################################"
+$HOME/dotfiles/update/terminal.sh
 # Install some Languages
 echo "##################################"
 echo "#############RUBY UPDATE##########"
