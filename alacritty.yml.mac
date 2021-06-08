@@ -55,8 +55,7 @@ colors:
 selection:
   save_to_clipboard: true
 key_bindings:
-  - { key: V, mods: Control, action: Paste }
-  - { key: T,      mods: Command,             chars: "\x11\x63"   }
+  - { key: V,      mods: Control, action: Paste }
   - { key: D,      mods: Command,             chars: "\x11\x25"   }
   - { key: D,      mods: Command|Shift,       chars: "\x11\x22"   }
   - { key: W,      mods: Command,             chars: "\x11\x78"   }
