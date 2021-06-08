@@ -1,6 +1,21 @@
 {
-  "language_list":[
-    "ruby": true,
-    "haskell": true
-  ]
+  "languages": {
+    "ruby": {
+      "enable": true,
+      "version": "3.0.1",
+      "modules": [
+        "solargraph"
+      ]
+    },
+    "nodejs": {
+      "enable": true,
+      "version": "14.17.0",
+      "modules": []
+    },
+    "jvm": {
+      "enable": true,
+      "version": "11.0.10",
+      "modules": ["gradle"]
+    }
+  }
 }
