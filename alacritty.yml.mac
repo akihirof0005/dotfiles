@@ -1,0 +1,63 @@
+shell:
+  program: /opt/homebrew/bin/zsh
+  args:
+    - -c
+    - "/opt/homebrew/bin/tmux a -t 0 || /opt/homebrew/bin/tmux"
+
+window:
+  padding:
+    x: 8
+    y: 4
+
+font:
+  normal:
+    family: 'Menlo'
+    style: Regular
+  bold:
+    family: 'Menlo'
+    style: Bold
+  size: 16.0
+  offset:
+    y: 1
+
+background_opacity: 0.85
+
+# https://github.com/alacritty/alacritty/wiki/Color-schemes
+# Colors (Ayu Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#0A0E14'
+    foreground: '#B3B1AD'
+
+  # Normal colors
+  normal:
+    black: '#01060E'
+    red: '#EA6C73'
+    green: '#91B362'
+    yellow: '#F9AF4F'
+    blue: '#53BDFA'
+    magenta: '#FAE994'
+    cyan: '#90E1C6'
+    white: '#C7C7C7'
+
+  # Bright colors
+  bright:
+    black: '#686868'
+    red: '#F07178'
+    green: '#C2D94C'
+    yellow: '#FFB454'
+    blue: '#59C2FF'
+    magenta: '#FFEE99'
+    cyan: '#95E6CB'
+    white: '#FFFFFF'
+
+selection:
+  save_to_clipboard: true
+key_bindings:
+  - { key: V, mods: Control, action: Paste }
+  - { key: T,      mods: Command,             chars: "\x11\x63"   }
+  - { key: D,      mods: Command,             chars: "\x11\x25"   }
+  - { key: D,      mods: Command|Shift,       chars: "\x11\x22"   }
+  - { key: W,      mods: Command,             chars: "\x11\x78"   }
+  - { key: Yen,                               chars: "\x5c"       }

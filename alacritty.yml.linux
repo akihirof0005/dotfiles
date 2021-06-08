@@ -1,7 +1,7 @@
 font:
-  size: 12
+  size: 16
   normal:
-    family: Ricty Diminished Discord for Powerline
+    family: Ricty Diminished
 
 background_opacity: 0.85
 
