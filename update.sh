@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 echo "##################################"
 echo "########SYSTEM IMFORMATION########"
 echo "##################################"
 neofetch
-$HOME/dotfiles/enviroment.sh
+source $HOME/dotfiles/enviroment.sh
 
 echo "##################################"
 echo "##########DOTFILE UPDATE##########"

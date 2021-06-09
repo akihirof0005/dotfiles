@@ -1,8 +1,4 @@
-#!/bin/bash
-
-JVM_FLAG=$(cat config.json | jq .languages.jvm.enable)
-JVM_VER=$(cat config.json | jq -r .languages.jvm.version)
-JVM_MODULES=$(cat config.json | jq -r .languages.jvm.modules[] | tr '\n' ' ')
+#!/bin/zsh
 
 if [ $JVM_FLAG ]; then
   curl -s "https://get.sdkman.io" | bash

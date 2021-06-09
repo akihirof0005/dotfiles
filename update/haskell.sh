@@ -1,5 +1,4 @@
-
-HASKELL_FLAG=$(cat ~/dotfiles/config.json | jq -r .languages.haskell.enable)
+#!/bin/zsh
 if [ HASKELL_FLAG ]; then
   stack upgrade
 fi
