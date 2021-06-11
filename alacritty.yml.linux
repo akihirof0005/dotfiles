@@ -1,7 +1,7 @@
 font:
-  size: 16
+  size: 12
   normal:
-    family: Ricty Diminished
+    family: Ricty
 
 background_opacity: 0.85
 
