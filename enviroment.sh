@@ -1,3 +1,8 @@
+if [ ! -e ~/dotfiles/config.json ]; then
+  cp ~/dotfiles/config.json.example  ~/dotfiles/config.json 
+fi
+
+
 export RUBY_FLAG=$(cat ~/dotfiles/config.json | jq .languages.ruby.enable)
 export RUBY_VER=$(cat ~/dotfiles/config.json | jq -r .languages.ruby.version)
 export RUBY_MODULES=$(cat ~/dotfiles/config.json | jq -r .languages.ruby.modules\[\] | tr '\n' ' ' )
