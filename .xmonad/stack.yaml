@@ -6,6 +6,7 @@ packages:
   - xmonad-contrib-git
 
 extra-deps:
+- X11-1.10
 flags:
   xmobar:
     with_xft: true
