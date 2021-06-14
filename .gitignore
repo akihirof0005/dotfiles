@@ -1,0 +1,7 @@
+.config/Gmail\ Desktop/*
+.config/coc/
+.config/configstore/
+
+pkgname/pacman.list
+pkgname/yay.list
+config.json

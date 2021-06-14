@@ -1,0 +1,25 @@
+{
+	"autoUpdate": true,
+	"lastWindowState": {
+		"bounds": {
+			"x": 3,
+			"y": 28,
+			"width": 952,
+			"height": 1047
+		},
+		"fullscreen": false,
+		"maximized": false
+	},
+	"compactHeader": true,
+	"hideFooter": true,
+	"hideRightSidebar": true,
+	"hideSupport": true,
+	"debugMode": true,
+	"launchMinimized": false,
+	"autoHideMenuBar": false,
+	"enableTrayIcon": true,
+	"autoFixUserAgent": false,
+	"trustedHosts": [],
+	"confirmExternalLinks": true,
+	"overrideUserAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0"
+}

@@ -1,0 +1,17 @@
+resolver: lts-16.31
+
+packages:
+  - xmobar-git
+  - xmonad-git
+  - xmonad-contrib-git
+
+extra-deps:
+- X11-1.10
+flags:
+  xmobar:
+    with_xft: true
+    with_datezone: true
+extra-package-dbs: []
+
+ghc-options:
+  "$everything": -haddock

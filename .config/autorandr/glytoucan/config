@@ -1,0 +1,18 @@
+output HDMI-A-0
+off
+output DisplayPort-0
+off
+output eDP
+crtc 0
+gamma 0.769:0.769:0.714
+mode 1920x1080
+pos 0x0
+primary
+rate 60.05
+output DisplayPort-1
+crtc 1
+gamma 0.769:0.769:0.714
+mode 3840x2160
+pos 1920x0
+rate 60.00
+transform 0.599991,0.000000,0.000000,0.000000,0.599991,0.000000,0.000000,0.000000,1.000000

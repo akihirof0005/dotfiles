@@ -1,0 +1,112 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Liberation Mono, 'Font Awesome 5 Free', 'Font Awesome 5 Brands', monospace;
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    /* match with alacritty background_opacity */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* border-bottom: 2px solid rgba(100, 114, 125, 0.7); */
+    color: white;
+    /* transition-property: background, background-color; */
+    /* transition-duration: .2s; */
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty {
+    background-color: transparent;
+}
+
+window#waybar.calibre-gui,
+window#waybar.firefox {
+    /* Arc-Dark theme background */
+    background-color: rgba(56, 60, 74, 0.999);
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: white;
+    border-bottom: 2px solid transparent;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    border-bottom: 2px solid #ffffff;
+}
+#workspaces button.focused {
+    background-color: #64727D;
+    border-bottom: 2px solid white;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: red;
+    border-bottom: 2px solid white;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#custom-layout,
+#tray,
+#mode,
+#idle_inhibitor {
+    padding: 4px 8px;
+}
+
+#battery.charging {
+    background-color: rgba(38, 166, 91, 0.2);
+}
+
+#battery.warning:not(.charging) {
+    background: rgba(245, 60, 60, 0.2);
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: rgba(245, 60, 60, 0.5);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    background: rgba(41, 128, 185, 0.2);
+}
+
+#network.disconnected {
+    background: rgba(245, 60, 60, 0.5);
+}
+
+#pulseaudio.muted {
+    background: #90b1b1;
+    color: #2a5c45;
+}
+
