@@ -48,13 +48,34 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'vim-scripts/groovyindent-unix'
 on_ft = ['groovy']
 
+#さまざまな言語をハイライト
 [[plugins]]
-repo = 'ghifarit53/tokyonight-vim'
+repo = 'nvim-treesitter/nvim-treesitter'
 hook_add = '''
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    disable = {
+      'lua',
+      'c_sharp',
+      'vue',
+    }
+  },
+   indent = {
+    enable = true,
+  },
+  ensure_installed = 'all',
+}
+EOF
+'''
+
+[[plugins]]
+repo = 'ulwlu/elly.vim'
+hook_add = '''
+  set background=dark
   set termguicolors
-  let g:tokyonight_style = 'night' " available: night, storm
-  let g:tokyonight_enable_italic = 1
-  colorscheme tokyonight
+  colorscheme elly
 '''
 
 # When the plugin is correctly loaded, there will be a nice statusline at the bottom of each vim window.
@@ -62,7 +83,7 @@ hook_add = '''
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-  let g:lightline = {'colorscheme' : 'tokyonight'}
+  let g:lightline = { 'colorscheme': 'elly' }
 '''
 
 #ファイルの形式を文脈で判断するプラグイン

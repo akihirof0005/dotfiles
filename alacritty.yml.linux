@@ -1,9 +1,11 @@
 font:
   size: 12
   normal:
-    family: Ricty
+    family: Ricty Diminished for Powerline
 
-background_opacity: 0.85
+window:
+  startup_mode: Fullscreen
+background_opacity: 0.95
 
 # https://github.com/alacritty/alacritty/wiki/Color-schemes
 # Colors (Ayu Dark)
@@ -39,3 +41,5 @@ selection:
   save_to_clipboard: true
 key_bindings:
 - { key: V, mods: Control, action: Paste }
+env:
+  TERM: alacritty
