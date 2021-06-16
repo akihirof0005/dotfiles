@@ -1,12 +1,12 @@
-resolver: lts-16.31
+resolver: lts-17.15
 
 packages:
-  - xmobar-git
-  - xmonad-git
-  - xmonad-contrib-git
+  - xmobar
+  - xmonad
+  - xmonad-contrib
 
 extra-deps:
-- X11-1.10
+- X11-1.9.2
 flags:
   xmobar:
     with_xft: true

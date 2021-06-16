@@ -2,7 +2,7 @@
 echo "##################################"
 echo "########SYSTEM IMFORMATION########"
 echo "##################################"
-neofetch
+#neofetch
 source $HOME/dotfiles/enviroment.sh
 
 echo "##################################"

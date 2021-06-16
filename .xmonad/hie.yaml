@@ -1,37 +1,37 @@
 cradle:
   stack:
-    - path: "xmobar-git/src"
+    - path: "xmobar/src"
       component: "xmobar:lib"
 
-    - path: "xmobar-git/app/Main.hs"
+    - path: "xmobar/app/Main.hs"
       component: "xmobar:exe:xmobar"
 
-    - path: "xmobar-git/src"
+    - path: "xmobar/src"
       component: "xmobar:test:XmobarTest"
 
-    - path: "xmobar-git/test"
+    - path: "xmobar/test"
       component: "xmobar:test:XmobarTest"
 
-    - path: "xmobar-git/bench/main.hs"
+    - path: "xmobar/bench/main.hs"
       component: "xmobar:bench:xmobarbench"
 
-    - path: "xmonad-contrib-git/./"
-      component: "xmonad-contrib:lib"
-
-    - path: "xmonad-contrib-git/tests"
-      component: "xmonad-contrib:test:tests"
-
-    - path: "xmonad-contrib-git/."
-      component: "xmonad-contrib:test:tests"
-
-    - path: "xmonad-git/src"
+    - path: "xmonad/src"
       component: "xmonad:lib"
 
-    - path: "xmonad-git/./Main.hs"
+    - path: "xmonad/./Main.hs"
       component: "xmonad:exe:xmonad"
 
-    - path: "xmonad-git/util/GenerateManpage.hs"
+    - path: "xmonad/util/GenerateManpage.hs"
       component: "xmonad:exe:generatemanpage"
 
-    - path: "xmonad-git/tests"
+    - path: "xmonad/tests"
       component: "xmonad:test:properties"
+
+    - path: "xmonad-contrib/./"
+      component: "xmonad-contrib:lib"
+
+    - path: "xmonad-contrib/tests"
+      component: "xmonad-contrib:test:tests"
+
+    - path: "xmonad-contrib/."
+      component: "xmonad-contrib:test:tests"

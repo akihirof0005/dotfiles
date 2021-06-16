@@ -1,11 +1,11 @@
 [submodule ".xmonad/xmobar-git"]
-	path = .xmonad/xmobar-git
+	path = .xmonad/xmobar
 	url = https://github.com/jaor/xmobar.git
 [submodule ".xmonad/xmonad-git"]
-	path = .xmonad/xmonad-git
+	path = .xmonad/xmonad
 	url = https://github.com/xmonad/xmonad
 [submodule ".xmonad/xmonad-contrib-git"]
-	path = .xmonad/xmonad-contrib-git
+	path = .xmonad/xmonad-contrib
 	url = https://github.com/xmonad/xmonad-contrib
 [submodule ".ssh"]
 	path = .ssh
