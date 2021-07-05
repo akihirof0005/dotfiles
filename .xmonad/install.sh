@@ -1,4 +1,4 @@
-cd  ~/dotfiles/xmonad
+cd  ~/.xmonad
 stack install
 chmod a+x build
 xmonad --recompile
