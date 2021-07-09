@@ -12,16 +12,16 @@ if [ "$(uname)" == 'Darwin' ]; then
   brew install neovim zip unzip git
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   if [ -e /etc/arch-release ]; then
-    git clone https://aur.archlinux.org/yay.git /tmp/yay
-    cd /tmp/yay
+    git clone https://aur.archlinux.org/paru.git /tmp/paru
+    cd /tmp/paru
     makepkg -si
     cd ~/dotfiles
-    yay -Syu
+    paru -Syu
     paccache -r
     paccache -ruk0
     sudo grub-mkconfig -o /boot/grub/grub.cfg
-    cat ~/dotfiles/pkgname/yay.list | yay -S -
-    cat ~/dotfiles/pkgname/pacman.list | yay -S -
+    cat ~/dotfiles/pkgname/paru.list | paru -S -
+    cat ~/dotfiles/pkgname/pacman.list | paru -S -
   elif [ -e /etc/lsb-release ]; then
     sudo apt update
     sudo apt upgrade

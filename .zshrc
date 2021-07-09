@@ -88,7 +88,3 @@ setopt prompt_sp
 ##alias
 alias update='$HOME/dotfiles/update.sh'
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-

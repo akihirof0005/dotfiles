@@ -10,11 +10,11 @@ if [ "$(uname)" == 'Darwin' ]; then
   brew upgrade
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   if [ -e /etc/arch-release ]; then
-    yay -Syu;
+    paru -Syu;
     paccache -r;
     paccache -ruk0
     sudo grub-mkconfig -o /boot/grub/grub.cfg
-    pacman -Qmq > ~/dotfiles/pkgname/yay.list
+    pacman -Qmq > ~/dotfiles/pkgname/paru.list
     pacman -Qnq > ~/dotfiles/pkgname/pacman.list
   elif [ -e /etc/lsb-release ]; then
     sudo apt update
