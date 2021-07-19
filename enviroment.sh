@@ -2,6 +2,15 @@ if [ ! -e ~/dotfiles/config.json ]; then
   cp ~/dotfiles/config.json.example  ~/dotfiles/config.json 
 fi
 
+export PERL5_FLAG=$(cat ~/dotfiles/config.json | jq .languages.perl5.enable)
+export PERL5_VER=$(cat ~/dotfiles/config.json | jq -r .languages.perl5.version)
+export PERL5_MODULES=$(cat ~/dotfiles/config.json | jq -r .languages.perl5.modules\[\] | tr '\n' ' ' )
+echo "#######PERL5########"
+echo "STATUS : "$PERL5_FLAG
+echo "VERSION: "$PERL5_VER
+echo "MODULES: "$PERL5_MODULES
+echo "#######END#########"
+echo ""
 
 export RUBY_FLAG=$(cat ~/dotfiles/config.json | jq .languages.ruby.enable)
 export RUBY_VER=$(cat ~/dotfiles/config.json | jq -r .languages.ruby.version)
