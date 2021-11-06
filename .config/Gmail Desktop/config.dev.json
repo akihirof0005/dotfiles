@@ -12,14 +12,26 @@
 	},
 	"compactHeader": true,
 	"hideFooter": true,
-	"hideRightSidebar": true,
 	"hideSupport": true,
 	"debugMode": true,
 	"launchMinimized": false,
 	"autoHideMenuBar": false,
 	"enableTrayIcon": true,
+	"showDockIcon": true,
+	"customUserAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
 	"autoFixUserAgent": false,
 	"trustedHosts": [],
 	"confirmExternalLinks": true,
-	"overrideUserAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0"
+	"hardwareAcceleration": true,
+	"downloadsShowSaveAs": false,
+	"downloadsOpenFolderWhenDone": false,
+	"downloadsLocation": "/home/skit",
+	"resetConfig": false,
+	"releaseChannel": "stable",
+	"__internal__": {
+		"migrations": {
+			"version": "2.25.3"
+		}
+	},
+	"darkMode": true
 }

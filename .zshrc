@@ -45,9 +45,9 @@ zstyle ':predict' verbose true
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
+    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (z-shell/zinit)…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+    command git clone https://github.com/z-shell/zinit "$HOME/.zinit/bin" && \
     print -P "%F{33}▓▒░ %F{34}Installation successful.%f" || \
     print -P "%F{160}▓▒░ The clone has failed.%f"
 fi
@@ -59,9 +59,9 @@ autoload -Uz _zinit
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-zinit light "zdharma/history-search-multi-word"
+zinit light "z-shell/history-search-multi-word"
 
-zinit light "zdharma/fast-syntax-highlighting"
+zinit light "z-shell/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 zinit light "paulirish/git-open"
 #zinit light "dracula/zsh"

@@ -1,4 +1,4 @@
-resolver: lts-17.15
+resolver: lts-18.14
 
 packages:
   - xmobar
@@ -6,7 +6,7 @@ packages:
   - xmonad-contrib
 
 extra-deps:
-- X11-1.9.2
+- X11-1.10
 flags:
   xmobar:
     with_xft: true
