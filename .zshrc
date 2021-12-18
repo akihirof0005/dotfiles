@@ -43,28 +43,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 autoload predict-on
 zstyle ':predict' verbose true
 
-### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (z-shell/zinit)…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/z-shell/zinit "$HOME/.zinit/bin" && \
-    print -P "%F{33}▓▒░ %F{34}Installation successful.%f" || \
-    print -P "%F{160}▓▒░ The clone has failed.%f"
-fi
 
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit installer's chunk
-zinit light "zsh-users/zsh-history-substring-search"
-zinit light "zsh-users/zsh-autosuggestions"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-zinit light "z-shell/history-search-multi-word"
-
-zinit light "z-shell/fast-syntax-highlighting"
-zinit light "zsh-users/zsh-completions"
-zinit light "paulirish/git-open"
-#zinit light "dracula/zsh"
 
   eval "$(rbenv init -)"
   #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -88,3 +67,29 @@ setopt prompt_sp
 ##alias
 alias update='$HOME/dotfiles/update.sh'
 
+
+### Added by Zinit's installer
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
+
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+### End of Zinit installer's chunk
+zinit light "zsh-users/zsh-history-substring-search"
+zinit light "zsh-users/zsh-autosuggestions"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+zinit light "z-shell/history-search-multi-word"
+zinit light "z-shell/fast-syntax-highlighting"
+zinit light "zsh-users/zsh-completions"
+zinit light "paulirish/git-open"
+#zinit light "dracula/zsh"
+### End of Zinit's installer chunk

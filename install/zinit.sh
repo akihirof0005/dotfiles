@@ -1,1 +1,2 @@
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/z-shell/zinit/main/doc/install.sh)"
+bash -c "$(curl -fsSL https://git.io/zinit-install)"
+
