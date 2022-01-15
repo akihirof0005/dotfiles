@@ -67,13 +67,12 @@ setopt prompt_sp
 ##alias
 alias update='$HOME/dotfiles/update.sh'
 
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 
 ### Added by Zinit's installer
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
-
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source "${ZINIT_HOME}/zinit.zsh"
 
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
