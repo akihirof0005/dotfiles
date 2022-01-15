@@ -71,11 +71,6 @@ alias update='$HOME/dotfiles/update.sh'
 ### Added by Zinit's installer
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
@@ -83,6 +78,11 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 ### End of Zinit installer's chunk
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
@@ -92,4 +92,5 @@ zinit light "z-shell/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 zinit light "paulirish/git-open"
 #zinit light "dracula/zsh"
+### End of Zinit's installer chunk
 ### End of Zinit's installer chunk
