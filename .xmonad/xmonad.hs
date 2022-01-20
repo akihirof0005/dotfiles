@@ -89,6 +89,7 @@ defaults = defaultConfig
       }
       `additionalKeys`
       [ ((modm , xK_w ), spawn "firefox")
+      , ((modm , xK_0x5a ), spawn "thunar")
       , ((modm , xK_f ), spawn "thunar")
       , ((modm , xK_b ), spawn "xfce4-screenshooter")
       , ((modm , xK_s ), spawn "slack")

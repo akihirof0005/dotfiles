@@ -73,15 +73,15 @@ source "${ZINIT_HOME}/zinit.zsh"
 ### Added by Zinit's installer
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
+
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
 zinit light-mode for \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
 ### End of Zinit installer's chunk
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
