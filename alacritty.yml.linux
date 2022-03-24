@@ -5,7 +5,7 @@ font:
 
 window:
   startup_mode: Fullscreen
-background_opacity: 0.85
+  opacity: 0.85
 
 # https://github.com/alacritty/alacritty/wiki/Color-schemes
 # Colors (Ayu Dark)
