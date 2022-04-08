@@ -11,3 +11,4 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export PATH="$HOME/.local/bin:$PATH"
+. "$HOME/.cargo/env"
