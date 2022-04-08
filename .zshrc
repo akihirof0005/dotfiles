@@ -71,14 +71,14 @@ alias update='$HOME/dotfiles/update.sh'
 ### Added by Zinit's installer
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
+
 zinit light-mode for \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
-
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source "${ZINIT_HOME}/zinit.zsh"
 
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
