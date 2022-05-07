@@ -6,9 +6,9 @@ prompt redhat
 # 履歴ファイルの保存先
 HISTFILE=~/.zsh_history
 # メモリに保存される履歴の件数
-export HISTSIZE=1000
+export HISTSIZE=100000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=10000000
+export SAVEHIST=1000000000
 # 重複を記録しない
 setopt hist_ignore_dups
 # 開始と終了を記録
@@ -44,11 +44,10 @@ autoload predict-on
 zstyle ':predict' verbose true
 
 
-
-  eval "$(rbenv init -)"
-  #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-  export SDKMAN_DIR=$HOME"/.sdkman"
-  [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
+eval "$(rbenv init -)"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR=$HOME"/.sdkman"
+[[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
