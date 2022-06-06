@@ -13,6 +13,6 @@ if [ $RUBY_FLAG ]; then
 mkdir -p "$RBENV_ROOT/plugins"
 
   git clone https://github.com/rkh/rbenv-update.git "$RBENV_ROOT/plugins/rbenv-update"
-  gem install $RUBY_MODULES
+  gem install ${RUBY_MODULES}
   cd ~/dotfiles
 fi

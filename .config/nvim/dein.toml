@@ -48,28 +48,6 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'vim-scripts/groovyindent-unix'
 on_ft = ['groovy']
 
-#さまざまな言語をハイライト
-[[plugins]]
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    disable = {
-      'lua',
-      'c_sharp',
-      'vue',
-    }
-  },
-   indent = {
-    enable = true,
-  },
-  ensure_installed = 'all',
-}
-EOF
-'''
-
 [[plugins]]
 repo = 'ulwlu/elly.vim'
 hook_add = '''
