@@ -72,7 +72,6 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 '''
-
 [[plugins]]
 repo = 'ulwlu/elly.vim'
 hook_add = '''

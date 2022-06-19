@@ -30,3 +30,4 @@ cd $PERL_BIN_DIR/bin
 curl -L https://cpanmin.us/ -o cpanm
 chmod +x cpanm
 cpanm App::cpanminus
+cpanm Log::Log4perl

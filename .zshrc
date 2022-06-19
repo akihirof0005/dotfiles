@@ -6,9 +6,9 @@ prompt redhat
 # 履歴ファイルの保存先
 HISTFILE=~/.zsh_history
 # メモリに保存される履歴の件数
-export HISTSIZE=1000
+export HISTSIZE=100000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=10000000
+export SAVEHIST=1000000000
 # 重複を記録しない
 setopt hist_ignore_dups
 # 開始と終了を記録
@@ -44,11 +44,10 @@ autoload predict-on
 zstyle ':predict' verbose true
 
 
-
-  eval "$(rbenv init -)"
-  #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-  export SDKMAN_DIR=$HOME"/.sdkman"
-  [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
+eval "$(rbenv init -)"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR=$HOME"/.sdkman"
+[[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -77,19 +76,25 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+### End of Zinit installer's chunk
+zinit light "zsh-users/zsh-history-substring-search"
+zinit light "zsh-users/zsh-autosuggestions"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+zinit light "zdharma/history-search-multi-word"
+zinit light "z-shell/fast-syntax-highlighting"
+zinit light "zsh-users/zsh-completions"
+zinit light "paulirish/git-open"
+#zinit light "dracula/zsh"
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
 zinit light-mode for \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
-### End of Zinit installer's chunk
-zinit light "zsh-users/zsh-history-substring-search"
-zinit light "zsh-users/zsh-autosuggestions"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-zinit light "z-shell/history-search-multi-word"
-zinit light "z-shell/fast-syntax-highlighting"
-zinit light "zsh-users/zsh-completions"
-zinit light "paulirish/git-open"
-#zinit light "dracula/zsh"
+
 ### End of Zinit's installer chunk
 ### End of Zinit's installer chunk
