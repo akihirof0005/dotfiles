@@ -51,7 +51,10 @@ on_ft = ['groovy']
 #さまざまな言語をハイライト
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''
+if = 'has("nvim")'
+on_event = 'BufRead'
+hook_post_update = 'TSUpdate'
+hook_source = '''
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
