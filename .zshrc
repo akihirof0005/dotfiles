@@ -80,7 +80,7 @@ autoload -Uz _zinit
 zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-zinit light "z-shell/history-search-multi-word"
+zinit light "zdharma/history-search-multi-word"
 zinit light "z-shell/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 zinit light "paulirish/git-open"
@@ -96,4 +96,5 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
+### End of Zinit's installer chunk
 ### End of Zinit's installer chunk
