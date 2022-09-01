@@ -1,6 +1,3 @@
-[submodule ".xmonad/xmobar-git"]
-	path = .xmonad/xmobar
-	url = https://codeberg.org/xmobar/xmobar.git
 [submodule ".xmonad/xmonad-git"]
 	path = .xmonad/xmonad
 	url = https://github.com/xmonad/xmonad
@@ -15,3 +12,6 @@
 	path = .bin
   url = git@github.com:akihirof0005/.bin.git
   ignore = dirty
+[submodule ".xmonad/xmobar"]
+	path = .xmonad/xmobar
+	url = https://codeberg.org/xmobar/xmobar.git
