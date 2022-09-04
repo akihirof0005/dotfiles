@@ -49,7 +49,7 @@ import XMonad.Hooks.SetWMName
 import qualified XMonad.StackSet as W
 import XMonad.Hooks.EwmhDesktops
 import Data.Ratio ((%))
-
+import XMonad.Layout.ThreeColumns
 import XMonad.Hooks.EwmhDesktops
 myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 "," 5 "," 6 "," 7 "," 8 "," 9 "]
 
@@ -89,7 +89,6 @@ defaults = defaultConfig
       }
       `additionalKeys`
       [ ((modm , xK_w ), spawn "firefox")
-      , ((modm , xK_0x5a ), spawn "thunar")
       , ((modm , xK_f ), spawn "thunar")
       , ((modm , xK_b ), spawn "xfce4-screenshooter")
       , ((modm , xK_s ), spawn "slack")
@@ -104,15 +103,13 @@ defaults = defaultConfig
       , ((modm , xK_a ), spawn "rofi -show ssh")
       , ((modm , xK_Tab ), moveTo Next NonEmptyWS)
       , ((modm .|. shiftMask, xK_Tab ), moveTo Prev NonEmptyWS)
-      , ((modm , xK_Up ), spawn "pactl set-sink-volume @DEFAULT_SINK@ +5% && volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
-      , ((modm , xK_Down ), spawn "pactl set-sink-volume @DEFAULT_SINK@ -5% && volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
       , ((modm , xK_Left ), spawn "headphone")
-      , ((modm , xK_Right ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle volnoti-show $(amixer get Master | grep -Po \"[0-9]+(?=%)\" | tail -1)")
       ]
 
-myLayout = withIM (1/5) (ClassName "Pragli") (spacing 3 $  emptyBSP  )
+myLayout = withIM (1/5) (ClassName "MuPDF") (spacing 3 $  emptyBSP  )
       ||| noBorders Full
       ||| OneBig (3/4) (3/4)
+      |||  Tall 1 (3/100) (1/2)
 
 myStartupHook = do
   spawn "bash ~/dotfiles/.bin/autostart > /tmp/start.log &"

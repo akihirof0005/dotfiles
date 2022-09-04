@@ -13,9 +13,14 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     paru -Syu;
     paccache -r;
     paccache -ruk0
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
     pacman -Qmq > ~/dotfiles/pkgname/paru.list
     pacman -Qnq > ~/dotfiles/pkgname/pacman.list
+
+sudo pacman -S grub dosfstools efibootmgr
+sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --recheck
+sudo cp /boot/EFI/grub/grubx64.efi  /boot/EFI/boot/bootx64.efi
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
   elif [ -e /etc/lsb-release ]; then
     sudo apt update
     sudo apt upgrade

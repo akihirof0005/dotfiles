@@ -1,4 +1,5 @@
-resolver: lts-18.14
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/9.yaml
 
 packages:
   - xmobar
