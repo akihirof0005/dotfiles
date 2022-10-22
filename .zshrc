@@ -81,7 +81,7 @@ zinit light "zsh-users/zsh-history-substring-search"
 zinit light "zsh-users/zsh-autosuggestions"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 zinit light "zdharma/history-search-multi-word"
-zinit light "z-shell/fast-syntax-highlighting"
+zinit light "zsh-users/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 zinit light "paulirish/git-open"
 #zinit light "dracula/zsh"
