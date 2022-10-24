@@ -1,7 +1,7 @@
 .config/Gmail\ Desktop/*
 .config/coc/
 .config/configstore/
-
+.xmonad/.stack-work
 pkgname/pacman.list
 pkgname/yay.list
 config.json
