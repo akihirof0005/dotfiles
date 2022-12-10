@@ -15,7 +15,7 @@ $HOME/dotfiles/install/jvmLan.sh
 $HOME/dotfiles/install/nodejs.sh
 $HOME/dotfiles/install/haskell.sh
 ## install dein for nvim
-$HOME/dotfiles/install/dein.sh
+#$HOME/dotfiles/install/dein.sh
 ## install zinit for zsh
 $HOME/dotfiles/install/zinit.sh
 ## some plugins for nvim CocInstall

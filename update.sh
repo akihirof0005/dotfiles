@@ -48,7 +48,7 @@ $HOME/dotfiles/update/haskell.sh
 echo "##################################"
 echo "#############DEIN UPDATE##########"
 echo "##################################"
-$HOME/dotfiles/update/dein.sh
+#$HOME/dotfiles/update/dein.sh
 $HOME/dotfiles/update/cocplugin.sh
 ## update zinit for zsh
 echo "##################################"

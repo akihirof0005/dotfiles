@@ -19,7 +19,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     paru -Syu
     paccache -r
     paccache -ruk0
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
     cat ~/dotfiles/pkgname/paru.list | paru -S -
     cat ~/dotfiles/pkgname/pacman.list | paru -S -
   elif [ -e /etc/lsb-release ]; then
