@@ -38,7 +38,7 @@ Plug 'Shougo/neosnippet.vim'
 
 Plug 'Shougo/neosnippet-snippets'
 " LSP client
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', {'branch': 'release'}
 "LSP server
 Plug 'neoclide/coc.nvim'
 
