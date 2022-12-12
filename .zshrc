@@ -85,9 +85,6 @@ zinit light "z-shell/fast-syntax-highlighting"
 zinit light "zsh-users/zsh-completions"
 zinit light "paulirish/git-open"
 #zinit light "dracula/zsh"
-### End of Zinit's installer chunk
-### End of Zinit's installer chunk
-
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -96,5 +93,3 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-### End of Zinit's installer chunk
-### End of Zinit's installer chunk
