@@ -1,5 +1,7 @@
 {
-	"autoUpdate": true,
+	"autoUpdateCheck": true,
+	"notifyUpdateDownloaded": true,
+	"skipUpdateVersion": "",
 	"lastWindowState": {
 		"bounds": {
 			"x": 3,
@@ -13,12 +15,11 @@
 	"compactHeader": true,
 	"hideFooter": true,
 	"hideSupport": true,
-	"debugMode": true,
 	"launchMinimized": false,
 	"autoHideMenuBar": false,
 	"enableTrayIcon": true,
 	"showDockIcon": true,
-	"customUserAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+	"customUserAgent": "",
 	"autoFixUserAgent": false,
 	"trustedHosts": [],
 	"confirmExternalLinks": true,
@@ -26,12 +27,32 @@
 	"downloadsShowSaveAs": false,
 	"downloadsOpenFolderWhenDone": false,
 	"downloadsLocation": "/home/skit",
+	"darkMode": true,
 	"resetConfig": false,
 	"releaseChannel": "stable",
+	"accounts": [
+		{
+			"id": "default",
+			"label": "Default",
+			"selected": true
+		}
+	],
+	"zoomFactor": 1,
+	"titleBarStyle": "app",
+	"notificationsShowSender": true,
+	"notificationsShowSubject": true,
+	"notificationsShowSummary": true,
+	"notificationsEnabled": true,
+	"notificationsPlaySound": false,
+	"blocker.enabled": true,
+	"blocker.blockAds": true,
+	"blocker.blockAnalytics": true,
+	"blocker.blockTrackers": true,
+	"autoUpdate": true,
+	"debugMode": true,
 	"__internal__": {
 		"migrations": {
-			"version": "2.25.3"
+			"version": "3.0.0-alpha.34"
 		}
-	},
-	"darkMode": true
+	}
 }
