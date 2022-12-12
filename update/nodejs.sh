@@ -9,6 +9,6 @@ if [ NODE_FLAG ]; then
 ) && \. "$NVM_DIR/nvm.sh"
   nvm install $NODE_VER
   nvm use $NODE_VER
-  nvm install-latest-npm
+  npm install -g npm
   node -v
 fi
