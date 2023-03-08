@@ -1,8 +1,29 @@
-dependencies:
-  - base >=4.7&& < 5
-  - xmobar
-  - xmonad
-  - xmonad-contrib
+name:     my-xmonad
+version:  0.1.0.0
 
-ghc-options:
-  "$everything": -haddock
+dependencies:
+- base
+- xmonad
+- xmonad-contrib
+- utf8-string
+- X11
+- containers
+#- dbus
+#- mtlxmonad-contrib
+#- data-default
+#- fuzzy
+#- monoid-subclasses
+
+library:
+  source-dirs: lib
+
+executables:
+  my-xmonad-exe:
+    main:  ./xmonad.hs
+    ghc-options:
+    - -Werror
+    - -fno-warn-missing-signatures 
+    - -threaded
+    dependencies:
+    - my-xmonad
+

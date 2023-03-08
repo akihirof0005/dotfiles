@@ -43,8 +43,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 autoload predict-on
 zstyle ':predict' verbose true
 
-
-eval "$(rbenv init -)"
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=$HOME"/.sdkman"
 [[ -s $HOME"/.sdkman/bin/sdkman-init.sh" ]] && source $HOME"/.sdkman/bin/sdkman-init.sh"

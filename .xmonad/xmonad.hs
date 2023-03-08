@@ -69,11 +69,11 @@ keysToRemove x =
     , (modm .|. shiftMask, xK_Return)
   ]
 
-strippedKeys x = foldr Data.Map.Strict.delete (keys defaultConfig x) (keysToRemove x)
+strippedKeys x = foldr Data.Map.Strict.delete (keys def x) (keysToRemove x)
 
 main :: IO ()
 main = xmonad =<< xmobar defaults
-defaults = defaultConfig
+defaults = def
       {
         borderWidth = 1,
         terminal = "alacritty",
@@ -101,8 +101,8 @@ defaults = defaultConfig
       , ((modm , xK_c ), kill ) -- %! Close the focused window
       , ((modm , xK_p ), spawn "rofi -show run")
       , ((modm , xK_a ), spawn "rofi -show ssh")
-      , ((modm , xK_Tab ), moveTo Next NonEmptyWS)
-      , ((modm .|. shiftMask, xK_Tab ), moveTo Prev NonEmptyWS)
+      , ((modm , xK_Tab ), moveTo Next hiddenWS )
+      , ((modm .|. shiftMask, xK_Tab ), moveTo Prev hiddenWS)
       , ((modm , xK_Left ), spawn "headphone")
       ]
 
