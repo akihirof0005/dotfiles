@@ -6,3 +6,6 @@
 	path = .bin
   url = git@github.com:akihirof0005/.bin.git
   ignore = dirty
+[submodule "xmonad"]
+	path = .xmonad
+	url = git@github.com:akihirof0005/my-xmonad.git
