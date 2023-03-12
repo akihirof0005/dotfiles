@@ -41,21 +41,11 @@ echo root:$ROOTPASSWD | chpasswd
 hwclock --systohc --utc
 
 ## install 
-pacman --noconfirm -S linux-zen linux-zen-headers linux-lts linux-lts-headers openssh intel-ucode
-
-## network
-echo '[Match]'                          > /etc/systemd/network/00-wired.network
-echo 'Name=eno1'                       >> /etc/systemd/network/00-wired.network
-echo '[Network]'                       >> /etc/systemd/network/00-wired.network
-echo 'Address=150.37.132.77/24'        >> /etc/systemd/network/00-wired.network
-echo 'DNS=10.37.112.71'                >> /etc/systemd/network/00-wired.network
-echo 'Gateway=150.37.132.1'            >> /etc/systemd/network/00-wired.network
-systemctl enable systemd-networkd
-systemctl enable systemd-resolved
+pacman --noconfirm -S linux-zen linux-zen-headers linux-lts linux-lts-headers openssh amd-ucode
 
 ##if you have wifi
-#pacman -S networkmanager
-#systemctl enable NetworkManager
+pacman -S networkmanager
+systemctl enable NetworkManager
 #type "sudo nmtui" after installed on terminal
 
 ## sshd
