@@ -59,4 +59,8 @@
       }
     }
   },
+<<<<<<< HEAD
+=======
+  "java.import.gradle.java.home": "/home/skit/.sdkman/candidates/java/8.0.352-zulu"
+>>>>>>> d7477f8442cb16a207a3192dc66e39dd875742fb
 }

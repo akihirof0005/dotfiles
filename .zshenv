@@ -8,7 +8,7 @@ export PATH="$PATH:$HOME/.bin"
 source "$HOME/.cargo/env"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 export PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"

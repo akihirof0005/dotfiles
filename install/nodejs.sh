@@ -11,6 +11,7 @@ export NVM_DIR="$HOME/.config/nvm"
   nvm install $NODE_VER
   nvm use $NODE_VER
   node -v
+  npm install -g yarn
 
   cd ~/dotfiles/
 

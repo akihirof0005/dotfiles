@@ -1,5 +1,13 @@
 filetype plugin indent on
 
+" swpファイル出力先
+set directory=~/cache/nvim/swp
+" バックアップファイル出力先
+set backupdir=~/cache/nvim/bak
+" undoファイル出力先
+set undodir=~/cache/nvim/undo
+
+
 call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'Shougo/dein.vim'
 " end補完
@@ -40,7 +48,7 @@ Plug 'Shougo/neosnippet-snippets'
 " LSP client
 Plug 'rust-lang/rust.vim', {'branch': 'release'}
 "LSP server
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'dense-analysis/ale'
 
@@ -52,7 +60,7 @@ Plug 'dense-analysis/ale'
 "Plug 'junegunn/fzf'
 Plug 'Shougo/deoplete.nvim'
 "Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate', 'on': [] }
+"Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate', 'on': [] }
 Plug 'andymass/vim-matchup', { 'on': [] }
 call plug#end()
 
@@ -121,7 +129,7 @@ colorscheme zephyr
 source ~/.config/nvim/plugins/neosnippet.rc.vim
 source ~/.config/nvim/plugins/rust.rc.vim
 let g:rustfmt_autosave = 1
-nmap gg=G :rustfmt
+"nmap gg=G :rustfmt
 let g:ale_fix_on_save = 1
 let g:ale_fixers = { 'rust': ['rustfmt'] }
 let g:ale_rustfmt_executable = 'rustfmt'
@@ -129,35 +137,3 @@ set rtp+=~/.vim/pack/XXX/start/LanguageClient-neovim
 let g:LanguageClient_serverCommands = { 'haskell': ['haskell-language-server-wrapper', '--lsp'] }
 let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
 
-
-
-function! s:treesitter_init() abort
-  " load once
-  if exists('g:plug_treesitter_loaded')
-    return
-  endif
-  let g:plug_treesitter_loaded = 1
-
-  " lazy load
-  call plug#load('nvim-treesitter', 'vim-matchup')
-
-  " initialize treesitter
-  let setup_file = g:plug_home .. '/nvim-treesitter/plugin/nvim-treesitter.lua'
-  execute 'luafile' setup_file
-
-  " setup treesitter
-lua << EOF
-  require('nvim-treesitter.configs').setup({
-    highlight = { enable = true },
-    indent = { enable = true },
-
-    -- setup modules
-    matchup = { enable = true },
-  })
-EOF
-
-  " enable treesitter
-  TSEnable highlight
-endfunction
-
-autocmd BufReadPost * ++once call <sid>treesitter_init()
