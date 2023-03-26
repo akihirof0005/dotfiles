@@ -1,0 +1,32 @@
+{
+  "languages": {
+    "perl5": {
+      "enable" : false,
+      "version": "5.34.1",
+      "modules": []
+    },
+    "haskell": {
+      "enable" : true
+    },
+    "rust": {
+      "enable" : true
+    },
+    "ruby": {
+      "enable": true,
+      "version": "3.0.1",
+      "modules": [
+        "solargraph"
+      ]
+    },
+    "nodejs": {
+      "enable": true,
+      "version": "18.15.0",
+      "modules": []
+    },
+    "jvm": {
+      "enable": true,
+      "version": "17.0.3",
+      "modules": ["gradle"]
+    }
+  }
+}
