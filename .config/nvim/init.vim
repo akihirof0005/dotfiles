@@ -60,7 +60,7 @@ Plug 'dense-analysis/ale'
 "Plug 'junegunn/fzf'
 Plug 'Shougo/deoplete.nvim'
 "Plug 'nvim-treesitter/nvim-treesitter'
-"Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate', 'on': [] }
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'andymass/vim-matchup', { 'on': [] }
 call plug#end()
 
