@@ -1,13 +1,5 @@
 filetype plugin indent on
 
-" swpファイル出力先
-set directory=~/cache/nvim/swp
-" バックアップファイル出力先
-set backupdir=~/cache/nvim/bak
-" undoファイル出力先
-set undodir=~/cache/nvim/undo
-
-
 call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'Shougo/dein.vim'
 " end補完
@@ -51,6 +43,8 @@ Plug 'rust-lang/rust.vim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'dense-analysis/ale'
+
+Plug 'sainnhe/everforest'
 
 "Plug 'autozimu/LanguageClient-neovim', {
 "    \ 'branch': 'next',
@@ -125,15 +119,70 @@ highlight EndOfBuffer ctermbg=none guibg=none
 
 set background=dark
 set termguicolors
-colorscheme zephyr
+colorscheme everforest
 source ~/.config/nvim/plugins/neosnippet.rc.vim
 source ~/.config/nvim/plugins/rust.rc.vim
 let g:rustfmt_autosave = 1
-"nmap gg=G :rustfmt
+nmap gg=G :rustfmt
 let g:ale_fix_on_save = 1
 let g:ale_fixers = { 'rust': ['rustfmt'] }
 let g:ale_rustfmt_executable = 'rustfmt'
 set rtp+=~/.vim/pack/XXX/start/LanguageClient-neovim
 let g:LanguageClient_serverCommands = { 'haskell': ['haskell-language-server-wrapper', '--lsp'] }
 let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+
+
+
+function! s:treesitter_init() abort
+  " load once
+  if exists('g:plug_treesitter_loaded')
+    return
+  endif
+  let g:plug_treesitter_loaded = 1
+
+  " lazy load
+  call plug#load('nvim-treesitter', 'vim-matchup')
+
+  " initialize treesitter
+  let setup_file = g:plug_home .. '/nvim-treesitter/plugin/nvim-treesitter.lua'
+  execute 'luafile' setup_file
+
+  " setup treesitter
+lua << EOF
+  require('nvim-treesitter.configs').setup({
+    highlight = { enable = true },
+    indent = { enable = true },
+
+    -- setup modules
+    matchup = { enable = true },
+  })
+EOF
+
+  " enable treesitter
+  TSEnable highlight
+endfunction
+
+autocmd BufReadPost * ++once call <sid>treesitter_init()
+
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+" for coc keybind
+" autocomplete
+inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
+inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
+inoremap <silent><expr> <Enter> coc#pum#visible() ? coc#pum#confirm() : "\<Enter>"
+inoremap <silent><expr> <Esc> coc#pum#visible() ? coc#pum#cancel() : "\<Esc>"
+inoremap <silent><expr> <C-h> coc#pum#visible() ? coc#pum#cancel() : "\<C-h>"
+
+" <Tab>で次、<S+Tab>で前
+inoremap <silent><expr> <TAB>
+  \ coc#pum#visible() ? coc#pum#next(1):
+  \ <SID>check_back_space() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<S-TAB>" " "\<C-h>"
+inoremap <silent><expr> <c-space> coc#refresh()
 
