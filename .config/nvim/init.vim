@@ -123,7 +123,7 @@ colorscheme everforest
 source ~/.config/nvim/plugins/neosnippet.rc.vim
 source ~/.config/nvim/plugins/rust.rc.vim
 let g:rustfmt_autosave = 1
-nmap gg=G :rustfmt
+"nmap gg=G :rustfmt
 let g:ale_fix_on_save = 1
 let g:ale_fixers = { 'rust': ['rustfmt'] }
 let g:ale_rustfmt_executable = 'rustfmt'
