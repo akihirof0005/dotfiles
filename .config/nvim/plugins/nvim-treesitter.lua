@@ -1,10 +1,3 @@
-require('nvim-treesitter.configs').setup {
-  ensure_installed = 'maintained',
-  highlight = {
-    enable = true,
-  },
-}
-
 local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
