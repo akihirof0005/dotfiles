@@ -72,17 +72,17 @@ echo "editor no"    >> /boot/loader/loader.conf
 echo "title arch linux"                  > /boot/loader/entries/lts.conf
 echo "linux /vmlinuz-linux-lts"         >> /boot/loader/entries/lts.conf
 echo "initrd /initramfs-linux-lts.img"  >> /boot/loader/entries/lts.conf
-echo "options root=$(blkid -o export /dev/${DISK}2 | grep ^UUID) rw"  >> /boot/loader/entries/lts.conf
+echo "options root=$(blkid -o export /dev/${DISK}p2 | grep ^UUID) rw"  >> /boot/loader/entries/lts.conf
 
 echo "title arch linux"  > /boot/loader/entries/zen.conf
 echo "linux /vmlinuz-linux-zen"  >> /boot/loader/entries/zen.conf
 echo "initrd /initramfs-linux-zen.img"  >> /boot/loader/entries/zen.conf
-echo "options root=$(blkid -o export /dev/${DISK}2 | grep ^UUID) rw"  >> /boot/loader/entries/zen.conf
+echo "options root=$(blkid -o export /dev/${DISK}p2 | grep ^UUID) rw"  >> /boot/loader/entries/zen.conf
 
 echo "title arch linux"  > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux"  >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img"  >> /boot/loader/entries/arch.conf
-echo "options root=$(blkid -o export /dev/${DISK}2 | grep ^UUID) rw"  >> /boot/loader/entries/arch.conf
+echo "options root=$(blkid -o export /dev/${DISK}p2 | grep ^UUID) rw"  >> /boot/loader/entries/arch.conf
 
 ## boot loaders hook
 mkdir /etc/pacman.d/hooks

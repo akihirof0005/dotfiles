@@ -1,17 +1,10 @@
 #!/bin/bash
-wget "http://www8.plala.or.jp/p_dolce/font/ap6.zip"
-
-wget "http://www8.plala.or.jp/p_dolce/font/ap8.zip"
-wget "https://github.com/mzyy94/RictyDiminished-for-Powerline/archive/master.zip"
-unzip -O cp932 ap8.zip
-unzip -O cp932 ap6.zip
-unzip master.zip
+wget "http://structure.kais.kyoto-u.ac.jp/lab/IncoUDJP010b.zip"
+unzip -O cp932 IncoUDJP010b.zip
 
 mkdir -p $HOME/.local/share/fonts/
-mv "./あんずもじ等幅2020/APT.ttf" $HOME/.local/share/fonts/
-mv "./あんずもじ始等幅/APJapanesefontHT.ttf" $HOME/.local/share/fonts/
-mv ./RictyDiminished-for-Powerline-master/vim-powerline-fontpatched/* $HOME/.local/share/fonts/
+mv ./IncoUDJP010b/* $HOME/.local/share/fonts/
 
-rm -r "./あんずもじ等幅2020" "./あんずもじ始等幅" ap8.zip ap6.zip master.zip RictyDiminished-for-Powerline-master
+rm -r "./IncoUDJP010b" IncoUDJP010b.zip
 
  fc-cache -vf
