@@ -57,6 +57,7 @@
           "completionSnippetsOn": true
         }
       }
-    }
+    },
+    "java.format.settings.profile": "GoogleStyle",
   },
 }
