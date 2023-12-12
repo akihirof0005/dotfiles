@@ -20,7 +20,7 @@
     },
     "nodejs": {
       "enable": true,
-      "version": "18.15.0",
+      "version": "20.5.0",
       "modules": []
     },
     "jvm": {
