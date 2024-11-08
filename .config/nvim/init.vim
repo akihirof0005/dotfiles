@@ -58,6 +58,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'andymass/vim-matchup', { 'on': [] }
 call plug#end()
 
+set dir=~/.neovimswap
 " Encode
 set encoding=utf-8
 scriptencoding utf-8
