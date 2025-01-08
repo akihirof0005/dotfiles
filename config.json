@@ -25,7 +25,7 @@
     },
     "jvm": {
       "enable": true,
-      "version": "17.0.3",
+      "version": "21.0.5",
       "modules": ["gradle"]
     }
   }

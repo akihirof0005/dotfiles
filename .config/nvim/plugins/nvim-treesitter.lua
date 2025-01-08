@@ -9,10 +9,10 @@ treesitter.setup {
     additional_vim_regex_highlighting = false, -- catpuucin用
     disable = {},
   },
-　indent ={
-　　enable =true,--言語に応じた自動インデントを有効化
-  　disable ={"html"},-- htmlのインデントだけ無効化
-　},
+  indent ={
+    enable =true,--言語に応じた自動インデントを有効化
+    disable ={"html"},-- htmlのインデントだけ無効化
+  },
   autotag = {
     enable = true,
   },

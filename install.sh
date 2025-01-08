@@ -17,8 +17,8 @@ $HOME/dotfiles/install/haskell.sh
 ## install dein for nvim
 #$HOME/dotfiles/install/dein.sh
 $HOME/dotfiles/install/vimplug.sh
-## install zinit for zsh
-$HOME/dotfiles/install/zinit.sh
+## install sheldon for zsh
+$HOME/dotfiles/install/sheldon.sh
 ## some plugins for nvim CocInstall
 $HOME/dotfiles/install/cocplugin.sh
 ## init install for nvim enviroment

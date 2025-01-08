@@ -52,6 +52,6 @@ echo "##################################"
 $HOME/dotfiles/update/cocplugin.sh
 ## update zinit for zsh
 echo "##################################"
-echo "############ZINIT UPDATE##########"
+echo "############SHELDON UPDATE##########"
 echo "##################################"
-$HOME/dotfiles/update/zinit.sh
+$HOME/dotfiles/update/sheldon.sh

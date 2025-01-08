@@ -65,32 +65,7 @@ setopt prompt_sp
 ##alias
 alias update='$HOME/dotfiles/update.sh'
 
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source "${ZINIT_HOME}/zinit.zsh"
-
-### Added by Zinit's installer
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-### End of Zinit installer's chunk
-zinit light "zsh-users/zsh-history-substring-search"
-zinit light "zsh-users/zsh-autosuggestions"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-zinit light "zdharma/history-search-multi-word"
-zinit light "z-shell/fast-syntax-highlighting"
-zinit light "zsh-users/zsh-completions"
-zinit light "paulirish/git-open"
-#zinit light "dracula/zsh"
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
 eval "$(~/.rbenv/bin/rbenv init - zsh)"
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+eval "$(sheldon source)"

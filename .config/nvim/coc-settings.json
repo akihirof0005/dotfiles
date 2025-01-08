@@ -1,43 +1,27 @@
 {
   "languageserver": {
+    "ruby": {
+      "command": "solargraph",
+      "args": ["stdio"],
+      "filetypes": ["ruby"],
+      "initializationOptions": { "formatting": true }
+    },
     "golang": {
       "command": "gopls",
-      "rootPatterns": [
-        "go.mod",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "filetypes": [
-        "go"
-      ]
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
     },
     "ccls": {
       "command": "ccls",
-      "filetypes": [
-        "c",
-        "cpp",
-        "objc",
-        "objcpp"
-      ],
-      "rootPatterns": [
-        ".ccls",
-        "compile_commands.json",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
       "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        }
+        "cache": { "directory": "/tmp/ccls" }
       }
     },
     "haskell": {
       "command": "haskell-language-server-wrapper",
-      "args": [
-        "--lsp"
-      ],
+      "args": ["--lsp"],
       "rootPatterns": [
         ".stack.yaml",
         ".hie-bios",
@@ -45,11 +29,7 @@
         "cabal.config",
         "package.yaml"
       ],
-      "filetypes": [
-        "hs",
-        "lhs",
-        "haskell"
-      ],
+      "filetypes": ["hs", "lhs", "haskell"],
       "initializationOptions": {
         "languageServerHaskell": {
           "hlintOn": true,
@@ -58,6 +38,17 @@
         }
       }
     },
-    "java.format.settings.profile": "GoogleStyle",
+    "java.format.settings.profile": "GoogleStyle"
   },
+  "ruby.format": true,
+  "ruby.lint": {
+    "rubocop": {
+      "enable": true,
+      "command": "rubocop",
+      "args": ["--auto-correct", "--stdin", "%filepath", "--format", "json"],
+      "isStdout": true,
+      "isStderr": false,
+      "autoFix": true
+    }
+  }
 }

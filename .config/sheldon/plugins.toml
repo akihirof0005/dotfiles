@@ -1,0 +1,59 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+
+# For example:
+#
+# [plugins.base16]
+# github = "chriskempson/base16-shell"
+
+
+# ~/.config/sheldon/plugins.toml
+
+[plugins."zsh-users/zsh-history-substring-search"]
+github = "zsh-users/zsh-history-substring-search"
+
+[plugins."zsh-users/zsh-autosuggestions"]
+github = "zsh-users/zsh-autosuggestions"
+
+[plugins."zdharma/history-search-multi-word"]
+github = "zdharma/history-search-multi-word"
+
+[plugins."z-shell/fast-syntax-highlighting"]
+github = "z-shell/fast-syntax-highlighting"
+
+[plugins."zsh-users/zsh-completions"]
+github = "zsh-users/zsh-completions"
+
+[plugins."paulirish/git-open"]
+github = "paulirish/git-open"
+
+# Optional: Dracula Theme (コメントアウト)
+# [plugins."dracula/zsh"]
+# github = "dracula/zsh"
+
+[plugins."zdharma-continuum/zinit-annex-as-monitor"]
+github = "zdharma-continuum/zinit-annex-as-monitor"
+
+[plugins."zdharma-continuum/zinit-annex-bin-gem-node"]
+github = "zdharma-continuum/zinit-annex-bin-gem-node"
+
+[plugins."zdharma-continuum/zinit-annex-patch-dl"]
+github = "zdharma-continuum/zinit-annex-patch-dl"
+
+[plugins."zdharma-continuum/zinit-annex-rust"]
+github = "zdharma-continuum/zinit-annex-rust"
+
+
