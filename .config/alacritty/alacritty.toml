@@ -31,7 +31,7 @@ foreground = "#B3B1AD"
 TERM = "alacritty"
 
 [font]
-size = 11
+size = 14
 
 [font.normal]
 family = "Menlo"

@@ -13,19 +13,19 @@
     },
     "ruby": {
       "enable": true,
-      "version": "3.2.1",
+      "version": "3.4.1",
       "modules": [
         "solargraph"
       ]
     },
     "nodejs": {
       "enable": true,
-      "version": "20.5.0",
+      "version": "22.9.0",
       "modules": []
     },
     "jvm": {
       "enable": true,
-      "version": "21.0.5",
+      "version": "23.0.1",
       "modules": ["gradle"]
     }
   }

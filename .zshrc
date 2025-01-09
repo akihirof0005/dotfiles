@@ -65,7 +65,10 @@ setopt prompt_sp
 ##alias
 alias update='$HOME/dotfiles/update.sh'
 
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
+# rbenvの設定
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 eval "$(sheldon source)"

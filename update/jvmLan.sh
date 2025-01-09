@@ -7,3 +7,5 @@ export SDKMAN_DIR=$HOME"/.sdkman"
 sdk update
 sdk selfupdate
 fi
+
+sdk install java $JVM_VER-tem
